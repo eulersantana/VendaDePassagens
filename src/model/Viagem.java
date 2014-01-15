@@ -28,6 +28,13 @@ public class Viagem {
     }
     
     /*
+     Metodo PUBLIC que adiciona um novo veículo na viagem
+     */
+    public void addVeiculos(Veiculo veiculo){
+        this.veiculos.add(veiculo);
+    }
+    
+    /*
      * Metodos Gets
      */
     public ArrayList <Veiculo> getVeiculos() {
