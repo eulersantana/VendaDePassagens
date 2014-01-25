@@ -24,5 +24,31 @@ App::import('Core', 'l10n');
         		}
         	}
 		}
+
+		function edit($id = null){
+			$this->Rota->id = $id;
+			if($this->request->is('get')) {
+				$this->request->data = $this->Rota->read();
+			} else {
+				if($this->Rota->save($this->request->data)) {
+					$this->Session->setFlash('A rota foi atualizada com sucesso !');
+					$this->redirect(array('action' => 'index'));
+				}
+			}
+		}
+
+		/*
+			Não vai permitir a exclusão caso algum veículo possua uma rota direcionada para ele.
+			Ver uma solução para isso!
+		*/
+		function delete($id){
+			if(!$this->request->is('post')){
+				throw new MethodNotAllowedException();
+			}
+			if ($this->Rota->delete($id)) {
+		        $this->Session->setFlash('Rota deletada com sucesso');
+		        $this->redirect(array('action' => 'index'));
+    		}
+		}
 	}
 ?>

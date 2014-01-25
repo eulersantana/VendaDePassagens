@@ -22,7 +22,18 @@
         			$this->redirect(array('action'=>'index'));
         		}
         	}
+		}
 
+		function edit($id = null){
+			$this->Veiculo->id = $id;
+			if($this->request->is('get')) {
+				$this->request->data = $this->Veiculo->read();
+			} else {
+				if($this->Veiculo->save($this->request->data)) {
+					$this->Session->setFlash('O veículo foi atualizado com sucesso !');
+					$this->redirect(array('action' => 'index'));
+				}
+			}
 		}
 	}
 ?>

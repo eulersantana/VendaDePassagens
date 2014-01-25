@@ -6,5 +6,6 @@
 	echo $this->Form->input('data_hora',array(
 			'type' => 'datetime',
 			'dateFormat' => 'DMY'));
+	echo $this->Form->input('pontos');
 	echo $this->Form->end('Salvar');
 ?>
