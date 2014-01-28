@@ -13,12 +13,12 @@
 
 	   	public $belongsTo = array('Rota');
 
-	   	public $validate = 	array(
-	   		'tipo' => array(
-	   			'required' => true,
-	   			'message' => 'Campo obritorio'
-	   			)
-	   		);
+	   	# public $validate = 	array(
+	   	# 	'tipo' => array(
+	   	# 		'required' => true,
+	   	# 		'message' => 'Campo obritorio'
+	   	#		)
+	   	# 	);
 
 
 	}
