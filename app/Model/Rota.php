@@ -6,5 +6,6 @@
 			 'trajeto' => 'CONCAT(inicio, " - " , fim, " - " , data_hora)'
 			 );
 
-		public $hasOne = array('Veiculo');	   
+		public $hasOne = array('Veiculo');	  
+		   
 	}

@@ -1,2 +1,2 @@
-1390508096
-a:1:{s:4:"name";a:2:{s:32:"dd16da3773ee50c9c1f4040b776b3744";s:9:"`buypass`";s:32:"359823f3b71ef3fd3a1fbcda38baad8f";s:7:"`rotas`";}}
+1390972982
+a:2:{s:4:"name";a:7:{s:32:"dd16da3773ee50c9c1f4040b776b3744";s:9:"`buypass`";s:32:"54820642e9dbcea3fbe53767e783b521";s:11:"`passagens`";s:32:"245a964f71c9fc4da1f4f8a88b18fe1b";s:15:"`Passagen`.`id`";s:32:"c066d3269bda3e27bf3cc389924fa519";s:20:"`Passagen`.`cliente`";s:32:"f2a761fc4049eb4da547a9b9589f7811";s:24:"`Passagen`.`funcionario`";s:32:"20398440f868dab89055dc998309d3d2";s:20:"`Passagen`.`rota_id`";s:32:"7a30e650653aa4415fc2179e777625d6";s:10:"`Passagen`";}s:6:"fields";a:1:{s:32:"0b06ee14076e161007edd626eb26ae02";a:4:{i:0;s:15:"`Passagen`.`id`";i:1;s:20:"`Passagen`.`cliente`";i:2;s:24:"`Passagen`.`funcionario`";i:3;s:20:"`Passagen`.`rota_id`";}}}

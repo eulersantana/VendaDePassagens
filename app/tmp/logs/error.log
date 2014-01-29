@@ -1718,3 +1718,1193 @@ Stack Trace:
 #3 C:\xampp\htdocs\VendaDePassagens\lib\Cake\Core\App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-01-28 18:23:59 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`buypass`.`veiculos`, CONSTRAINT `fk_veiculos_rotas1` FOREIGN KEY (`rota_id`) REFERENCES `rotas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /VendaDePassagens/veiculos/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `bu...', Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Datasource/DboSource.php(1003): DboSource->execute('INSERT INTO `bu...')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Model.php(1830): DboSource->create(Object(Veiculo), Array, Array)
+#4 /opt/lampp/htdocs/VendaDePassagens/app/Controller/VeiculosController.php(32): Model->save(Array)
+#5 [internal function]: VeiculosController->add()
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(VeiculosController), Array)
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(VeiculosController), Object(CakeRequest), Object(CakeResponse))
+#9 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-01-28 18:24:20 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`buypass`.`veiculos`, CONSTRAINT `fk_veiculos_rotas1` FOREIGN KEY (`rota_id`) REFERENCES `rotas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /VendaDePassagens/veiculos/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `bu...', Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Datasource/DboSource.php(1003): DboSource->execute('INSERT INTO `bu...')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Model.php(1830): DboSource->create(Object(Veiculo), Array, Array)
+#4 /opt/lampp/htdocs/VendaDePassagens/app/Controller/VeiculosController.php(32): Model->save(Array)
+#5 [internal function]: VeiculosController->add()
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(VeiculosController), Array)
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(VeiculosController), Object(CakeRequest), Object(CakeResponse))
+#9 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-01-28 19:19:47 Error: Fatal Error (4): syntax error, unexpected '?>' in [/opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp, line 26]
+2014-01-28 19:19:47 Error: [InternalErrorException] Internal Server Error
+Request URL: /VendaDePassagens/veiculos/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 26)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 26, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 26, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-28 19:19:49 Error: Fatal Error (4): syntax error, unexpected '?>' in [/opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp, line 26]
+2014-01-28 19:19:49 Error: [InternalErrorException] Internal Server Error
+Request URL: /VendaDePassagens/veiculos/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 26)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 26, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 26, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-28 20:03:59 Error: [MissingHelperException] Helper class userLoggedHelper could not be found.
+Exception Attributes: array (
+  'class' => 'userLoggedHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('userLogged')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('userLogged')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('userLogged')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-28 20:04:31 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('Auth')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('Auth')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-28 20:04:51 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('Auth')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('Auth')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-28 20:04:55 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('Auth')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('Auth')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-28 20:05:49 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('Auth')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('Auth')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-28 20:06:16 Error: Fatal Error (1): Call to undefined method View::login() in [/opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp, line 48]
+2014-01-28 20:06:16 Error: [FatalErrorException] Call to undefined method View::login()
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/opt/lampp/htdo...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/opt/lampp/htdo...', 48, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/opt/lampp/htdo...', 48, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-28 20:06:46 Error: Fatal Error (1): Call to undefined method View::login() in [/opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp, line 48]
+2014-01-28 20:06:46 Error: [FatalErrorException] Call to undefined method View::login()
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/opt/lampp/htdo...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/opt/lampp/htdo...', 48, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/opt/lampp/htdo...', 48, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-28 20:06:52 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('Auth')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('Auth')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-29 05:21:35 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:21:35 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:23:32 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:23:32 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:26:00 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('Auth')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('Auth')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PassagensController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-29 05:26:20 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('Auth')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('Auth')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PassagensController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-29 05:27:22 Error: [MissingTableException] Table usuarios for model Usuario was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'usuarios',
+  'class' => 'Usuario',
+  'ds' => 'default',
+)
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Model.php(3493): Model->setSource('usuarios')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Model.php(2897): Model->getDataSource()
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php(8): Model->find('all')
+#4 [internal function]: PassagensController->index()
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PassagensController), Array)
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PassagensController), Object(CakeRequest), Object(CakeResponse))
+#8 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-01-29 05:27:35 Error: [MissingTableException] Table usuarios for model Usuario was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'usuarios',
+  'class' => 'Usuario',
+  'ds' => 'default',
+)
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Model.php(3493): Model->setSource('usuarios')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Model.php(2897): Model->getDataSource()
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php(8): Model->find('all')
+#4 [internal function]: PassagensController->index()
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PassagensController), Array)
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PassagensController), Object(CakeRequest), Object(CakeResponse))
+#8 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-01-29 05:27:56 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:27:56 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:29:12 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:29:12 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:31:21 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:31:21 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:31:51 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:31:51 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:32:42 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:32:42 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:33:32 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('Auth')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('Auth')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PassagensController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-29 05:34:27 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('Auth')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('Auth')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PassagensController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-29 05:34:42 Error: [MissingControllerException] Controller class PassagemController could not be found.
+Exception Attributes: array (
+  'class' => 'PassagemController',
+  'plugin' => NULL,
+)
+Request URL: /VendaDePassagens/passagem
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-29 05:36:22 Error: [MissingControllerException] Controller class PassagemController could not be found.
+Exception Attributes: array (
+  'class' => 'PassagemController',
+  'plugin' => NULL,
+)
+Request URL: /VendaDePassagens/passagem
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-29 05:36:29 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:36:29 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:39:38 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:39:38 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:39:41 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:39:41 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:40:36 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 4]
+2014-01-29 05:40:36 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 4)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 4, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 4, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:40:42 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 4]
+2014-01-29 05:40:42 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens/index
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 4)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 4, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 4, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:40:49 Error: [MissingActionException] Action PassagensController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'PassagensController',
+  'action' => 'add',
+)
+Request URL: /VendaDePassagens/passagens/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PassagensController), Object(CakeRequest), Object(CakeResponse))
+#2 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-01-29 05:41:05 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 4]
+2014-01-29 05:41:05 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 4)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 4, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 4, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:41:41 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:41:41 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:41:41 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:41:41 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:41:42 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:41:42 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:42:48 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:42:48 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:42:49 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:42:49 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:42:52 Error: Fatal Error (1): Call to a member function exists() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 13]
+2014-01-29 05:42:52 Error: [FatalErrorException] Call to a member function exists() on a non-object
+Request URL: /VendaDePassagens/passagens/view
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 13)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 13, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 13, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:43:47 Error: Fatal Error (1): Call to a member function exists() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 13]
+2014-01-29 05:43:47 Error: [FatalErrorException] Call to a member function exists() on a non-object
+Request URL: /VendaDePassagens/passagens/view
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 13)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 13, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 13, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:43:48 Error: Fatal Error (1): Call to a member function exists() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 13]
+2014-01-29 05:43:48 Error: [FatalErrorException] Call to a member function exists() on a non-object
+Request URL: /VendaDePassagens/passagens/view
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 13)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 13, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 13, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:43:52 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:43:52 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:44:48 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:44:48 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:44:51 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:44:51 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:44:53 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 8]
+2014-01-29 05:44:53 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:45:05 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /VendaDePassagens/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-29 05:45:25 Error: [MissingActionException] Action PassagensController::i() could not be found.
+Exception Attributes: array (
+  'controller' => 'PassagensController',
+  'action' => 'i',
+)
+Request URL: /VendaDePassagens/passagens/i
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PassagensController), Object(CakeRequest), Object(CakeResponse))
+#2 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-01-29 05:45:30 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/users/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('Auth')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('Auth')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-29 05:45:41 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('Auth')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('Auth')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-29 05:46:45 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('Auth')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('Auth')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-29 05:47:42 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('Auth')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('Auth')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-29 05:48:48 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('Auth')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('Auth')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-29 05:48:50 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('Auth')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('Auth')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-29 05:49:24 Error: [MissingViewException] View file "/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp',
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-29 05:49:45 Error: [MissingViewException] View file "/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp',
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-29 05:49:46 Error: [MissingViewException] View file "/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp',
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-29 05:49:47 Error: [MissingViewException] View file "/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp',
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-29 05:49:48 Error: [MissingViewException] View file "/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp',
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-29 05:49:48 Error: [MissingViewException] View file "/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp',
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-29 05:52:38 Error: [MissingViewException] View file "/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp',
+)
+Request URL: /VendaDePassagens/users/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-29 05:52:39 Error: [MissingViewException] View file "/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/index.ctp',
+)
+Request URL: /VendaDePassagens/users
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-29 05:52:39 Error: [MissingViewException] View file "/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/index.ctp',
+)
+Request URL: /VendaDePassagens/users
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-29 05:52:39 Error: [MissingViewException] View file "/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/index.ctp',
+)
+Request URL: /VendaDePassagens/users
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-29 05:52:39 Error: [MissingViewException] View file "/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/index.ctp',
+)
+Request URL: /VendaDePassagens/users
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-29 05:53:17 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/users
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('Auth')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('Auth')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-29 05:53:29 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /VendaDePassagens/users
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(818): HelperCollection->__isset('Auth')
+#2 /opt/lampp/htdocs/VendaDePassagens/app/View/Layouts/default.ctp(48): View->__get('Auth')
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(523): View->_render('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(468): View->renderLayout('', 'default')
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#8 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#9 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-01-29 05:58:02 Error: [MissingViewException] View file "/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp',
+)
+Request URL: /VendaDePassagens/Passagens/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PassagensController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-29 05:58:15 Error: [MissingViewException] View file "/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/lampp/htdocs/VendaDePassagens/app/View/Passagens/login.ctp',
+)
+Request URL: /VendaDePassagens/Passagens/login
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PassagensController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-29 05:58:54 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 05:58:54 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/Passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:59:13 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 05:59:13 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/Passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:59:18 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 05:59:18 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:59:34 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 05:59:34 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:59:43 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 05:59:43 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 05:59:44 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 05:59:44 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:00:43 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:00:43 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:02:45 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:02:45 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:02:46 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:02:46 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:02:47 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:02:47 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:03:40 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:03:40 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:06:13 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:06:13 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:06:19 Error: [MissingControllerException] Controller class PassagemController could not be found.
+Exception Attributes: array (
+  'class' => 'PassagemController',
+  'plugin' => NULL,
+)
+Request URL: /VendaDePassagens/passagem
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-29 06:06:25 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:06:25 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:09:17 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:09:17 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:09:18 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:09:18 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:09:19 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:09:19 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:09:19 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:09:19 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:09:20 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:09:20 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:09:20 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:09:20 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:09:20 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:09:20 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:09:20 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:09:20 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:09:20 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:09:20 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:09:40 Error: Fatal Error (64): Cannot redeclare Rota::$hasOne in [/opt/lampp/htdocs/VendaDePassagens/app/Model/Rota.php, line 10]
+2014-01-29 06:09:40 Error: [FatalErrorException] Cannot redeclare Rota::$hasOne
+Request URL: /VendaDePassagens/rotas/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:11:14 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:11:14 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:21:58 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:21:58 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:22:19 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:22:19 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:22:20 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:22:20 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-29 06:22:21 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-29 06:22:21 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
