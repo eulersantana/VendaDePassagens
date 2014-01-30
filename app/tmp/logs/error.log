@@ -5241,3 +5241,457 @@ Stack Trace:
 #3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-01-30 03:15:54 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PromocoesController.php, line 8]
+2014-01-30 03:15:54 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:16:07 Error: Fatal Error (4): syntax error, unexpected '<<' (T_SL) in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 2]
+2014-01-30 03:16:07 Error: [FatalErrorException] syntax error, unexpected '<<' (T_SL)
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 2)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 2, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 2, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:16:45 Error: Fatal Error (64): Class declarations may not be nested in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 32]
+2014-01-30 03:16:45 Error: [FatalErrorException] Class declarations may not be nested
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Class declarati...', '/opt/lampp/htdo...', 32)
+#1 [internal function]: ErrorHandler::handleError(64, 'Class declarati...', '/opt/lampp/htdo...', 32, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 64, 'Class declarati...', '/opt/lampp/htdo...', 32, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:17:31 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 17]
+2014-01-30 03:17:31 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 17, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 17, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:18:31 Error: Fatal Error (4): syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION) in [/opt/lampp/htdocs/VendaDePassagens/app/Model/Passagem.php, line 4]
+2014-01-30 03:18:31 Error: [FatalErrorException] syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION)
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 4, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 4, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:18:32 Error: Fatal Error (4): syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION) in [/opt/lampp/htdocs/VendaDePassagens/app/Model/Passagem.php, line 4]
+2014-01-30 03:18:32 Error: [FatalErrorException] syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION)
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 4, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 4, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:19:03 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Rota'
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Passage...', Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Datasource/DboSource.php(664): DboSource->execute('SELECT `Passage...', Array, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Datasource/DboSource.php(1076): DboSource->fetchAll('SELECT `Passage...', false)
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Model.php(2897): DboSource->read(Object(Passagem), Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(1079): PaginatorComponent->paginate(NULL, Array, Array)
+#8 /opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php(15): Controller->paginate()
+#9 [internal function]: PassagensController->index()
+#10 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PassagensController), Array)
+#11 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PassagensController), Object(CakeRequest), Object(CakeResponse))
+#13 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-01-30 03:19:49 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Rota.passagen_id' in 'on clause'
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Passage...', Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Datasource/DboSource.php(664): DboSource->execute('SELECT `Passage...', Array, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Datasource/DboSource.php(1076): DboSource->fetchAll('SELECT `Passage...', false)
+#4 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Model.php(2897): DboSource->read(Object(Passagem), Array)
+#5 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#6 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(1079): PaginatorComponent->paginate(NULL, Array, Array)
+#8 /opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php(15): Controller->paginate()
+#9 [internal function]: PassagensController->index()
+#10 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PassagensController), Array)
+#11 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PassagensController), Object(CakeRequest), Object(CakeResponse))
+#13 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-01-30 03:22:38 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-30 03:22:38 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:25:21 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PromocoesController.php, line 8]
+2014-01-30 03:25:21 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:25:36 Error: [MissingControllerException] Controller class PragamentosController could not be found.
+Exception Attributes: array (
+  'class' => 'PragamentosController',
+  'plugin' => NULL,
+)
+Request URL: /VendaDePassagens/pragamentos
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-30 03:25:51 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-30 03:25:51 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:27:49 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-30 03:27:49 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:27:53 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-30 03:27:53 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:28:05 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-30 03:28:05 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:28:08 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PassagensController.php, line 10]
+2014-01-30 03:28:08 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/passagens/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 10, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:28:18 Error: [MissingControllerException] Controller class PamocoesController could not be found.
+Exception Attributes: array (
+  'class' => 'PamocoesController',
+  'plugin' => NULL,
+)
+Request URL: /VendaDePassagens/pamocoes
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-30 03:28:30 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 4]
+2014-01-30 03:28:30 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 4, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 4, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:28:46 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 4]
+2014-01-30 03:28:46 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 4, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 4, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:31:38 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 4]
+2014-01-30 03:31:38 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 4, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 4, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:32:10 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 4]
+2014-01-30 03:32:10 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 4, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 4, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:32:30 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 4]
+2014-01-30 03:32:30 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 4, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 4, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:32:50 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 4]
+2014-01-30 03:32:50 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 4, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 4, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:35:59 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 5]
+2014-01-30 03:35:59 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:36:15 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 5]
+2014-01-30 03:36:15 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:36:19 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 5]
+2014-01-30 03:36:19 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:37:27 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 5]
+2014-01-30 03:37:27 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:38:12 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 5]
+2014-01-30 03:38:12 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:39:35 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PromocoesController.php, line 8]
+2014-01-30 03:39:35 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:39:51 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PromocoesController.php, line 8]
+2014-01-30 03:39:51 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:40:01 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PromocoesController.php, line 8]
+2014-01-30 03:40:01 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:40:14 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PromocoesController.php, line 8]
+2014-01-30 03:40:14 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:40:17 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PromocoesController.php, line 8]
+2014-01-30 03:40:17 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 8, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:40:59 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PromocoesController.php, line 9]
+2014-01-30 03:40:59 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 9, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 9, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:41:07 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 5]
+2014-01-30 03:41:07 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:41:20 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 5]
+2014-01-30 03:41:20 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:41:31 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 5]
+2014-01-30 03:41:31 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:41:49 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/VendaDePassagens/app/Controller/PromocoesController.php, line 9]
+2014-01-30 03:41:49 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 9, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 9, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:41:59 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 5]
+2014-01-30 03:41:59 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:43:22 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 5]
+2014-01-30 03:43:22 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:43:24 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 5]
+2014-01-30 03:43:24 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:43:25 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 5]
+2014-01-30 03:43:25 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:43:55 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/VendaDePassagens/app/View/Promocoes/add.ctp, line 5]
+2014-01-30 03:43:55 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /VendaDePassagens/promocoes/add
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 5, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-30 03:46:08 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC), expecting ',' or ';' in [/opt/lampp/htdocs/VendaDePassagens/app/Model/Passagem.php, line 9]
+2014-01-30 03:46:08 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC), expecting ',' or ';'
+Request URL: /VendaDePassagens/passagens
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 9, Array)
+#2 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 9, Array)
+#3 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

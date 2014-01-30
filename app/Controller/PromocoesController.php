@@ -4,11 +4,11 @@
         public $name = 'Promocoes';
         public $components = array('Session');
 
-        private function getRotas(){
-            $rotas = $this->Promocao->Rota->find('list', array('fields' => array('id','trajeto')));
+         private function getRotas(){
 
-            $this->set(compact('rotas'));
-        }
+        $rotas = $this->Promocao->Rota->find('list', array('fields' => array('id','trajeto')));
+        $this->set(compact('rotas'));
+    }
 
         function index(){
             
