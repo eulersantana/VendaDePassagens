@@ -1,4 +1,4 @@
-<h1>Adicionar Veículo</h1>
+<h1>Adicionar Passagem</h1>
 <?php
 	echo $this->Form->create('Passagens');
 	echo $this->Form->input('cliente');	

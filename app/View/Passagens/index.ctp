@@ -1,32 +1,26 @@
-<h1>Veículos</h1>
+<h1>Passagens</h1>
 <table>
 	<tr>
 		<th>Id</th>
-		<th>Tipo</th>
-		<th>Poltronas Livres</th>
-		<th>Poltronas Ocupadas</th>
-		<th>Rota associada</th>
-		<th>Ação</th>
+		<th>Cliente</th>
+		<th>Funcionário</th>
+		<th>Rota</th>
+		<th>Ações</th>
 	</tr>
-	<?php foreach ($veiculo as $veiculos): ?>
-	<tr>
-		<td><?php echo $veiculos['Veiculo']['id']; ?></td>
-		<td><?php echo $this->Html->link($veiculos['Veiculo']['tipo'],array('controller'=> 'veiculos', 'action'=> 'view', $veiculos['Veiculo']['id'])); ?></td>
-		<td><?php echo $veiculos['Veiculo']['poltronas_livre']; ?></td>
-		<td><?php echo $veiculos['Veiculo']['poltronas_ocupadas']; ?></td>
-		<td><?php echo $veiculos['Rota']['inicio'].' - '.$veiculos['Rota']['fim'].' - '.$veiculos['Rota']['data_hora']; ?></td>
-		<td>
-			<?php 
-				echo $this->Form->postLink(
+	<?php foreach ($passagem as $passagens): ?>
+		<tr>
+			<th><?php echo $passagens['Passagem']['id'];?></th>
+			<th><?php echo $passagens['Passagem']['cliente'];?></th>
+			<th><?php echo $passagens['Passagem']['funcionario'];?></th>
+			<th><?php echo $passagens['Rota']['trajeto'];?></th>
+			<th>
+				<?php echo $this->Html->link('Edit',array('action' => 'edit', $passagens['Passagem']['id'])); 
+								echo $this->Form->postLink(
 		        'Delete',
-		        array('action' => 'delete', $veiculos['Veiculo']['id']),
+		        array('action' => 'delete', $passagens['Passagem']['id']),
 		        array('confirm' => 'Você tem certeza ?'));
-			?>
-		</td>
-
-
-
-	</tr>
-<?php endforeach;?>
-
+				?>
+			</th>
+		</tr>	
+	<?php endforeach;?>
 </table>
