@@ -3,7 +3,7 @@
 	class Promocao extends AppModel{
 		public $name = 'Promocao';
 	
-		public $hasOne = array('Rota');
+		public $belongsTo = array('Rota');
 
 	}
 ?>
