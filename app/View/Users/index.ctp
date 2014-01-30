@@ -10,7 +10,7 @@
 	</tr>
 	<?php
 	$i = 0;
-	foreach ($users as $user): ?>
+	foreach ($useres as $user): ?>
 	<tr>
 		<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['username']); ?>&nbsp;</td>

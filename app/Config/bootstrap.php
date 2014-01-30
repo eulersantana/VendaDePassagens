@@ -105,3 +105,4 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+include dirname(__FILE__).DS.'inflection.php';

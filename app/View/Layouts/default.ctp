@@ -44,7 +44,15 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<div id="container">
 		<div id="header">
 			<!-- <h1><?php //echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1> -->
-			
+			<?php
+				
+				 		if($this->Session->read('Auth.User.nome')){
+				 			echo $this->Session->read('Auth.User.nome').", <a href=".Router::url('/')."users/logout>Logout</a>" ;
+				 		}else{
+				 			echo "<a href=".Router::url('/')."users/login>Login</a>" ;
+				 		}
+				 	?>
+
 		</div>
 		<div id="content">
 
