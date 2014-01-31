@@ -9,16 +9,26 @@ class UsersController extends AppController {
 
     }
 
+    public function view_action() {
+        // códigos
+        $this->layout = 'layoutPrincipal';
+    }
+
     public function login() {
+        
         if ($this->Auth->login()) {
             $this->redirect($this->Auth->redirect());
         } else {
             $this->Session->setFlash(__('Usuario ou Senha invalidos.'));
         }
+        self::view_action();
     }
 
     public function logout() {
-        $this->redirect($this->Auth->logout());
+        if($this->Auth->logout()){
+            $this->redirect(Router::url('/',true));
+        }
+
     }
     
     public function loggedout(){
@@ -26,8 +36,10 @@ class UsersController extends AppController {
     }
 
     public function index() {
+        
         $this->User->recursive = 0;
-        $this->set('useres', $this->paginate());
+        $this->set('users', $this->paginate());
+         self::view_action();
     }
 
     public function view($id = null) {
@@ -36,6 +48,7 @@ class UsersController extends AppController {
             throw new NotFoundException(__('Invalid user'));
         }
         $this->set('user', $this->User->read(null, $id));
+         self::view_action();
     }
 
      public function add(){
@@ -47,6 +60,7 @@ class UsersController extends AppController {
                 $this->redirect(array('action'=>'index'));
             }
         }
+         self::view_action();
     }
 
     public function edit($id = null) {
@@ -65,6 +79,7 @@ class UsersController extends AppController {
             $this->request->data = $this->User->read(null, $id);
             unset($this->request->data['User']['password']);
         }
+         self::view_action();
     }
 
     public function delete($id = null) {

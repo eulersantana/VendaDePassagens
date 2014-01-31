@@ -1,12 +1,23 @@
-<div class="users form">
+
 <?php echo $this->Session->flash('auth'); ?>
 <?php echo $this->Form->create('User');?>
     <fieldset>
         <legend><?php echo __(''); ?></legend>
     <?php
-        echo $this->Form->input('username');
-        echo $this->Form->input('password');
+    	echo "<div class='clearfix'>";
+        	echo $this->Form->input('username',array('class'=>'form-control','label'=>'E-mail'));
+        echo "</div>";
+        echo "<div class='clearfix'>";
+        	echo $this->Form->input('password',array('class'=>'form-control','label'=>'Senha'));
+        echo "</div>";
     ?>
     </fieldset>
-<?php echo $this->Form->end(__('Logar'));?>
-</div>
+<?php $options = array(
+		'label'=>'Logar',
+		'class'=>'form-control'
+	); 
+	echo "<p>";
+	echo $this->Form->end($options);
+	echo "</p>";
+	?>
+

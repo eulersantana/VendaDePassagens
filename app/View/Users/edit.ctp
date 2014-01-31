@@ -1,21 +1,27 @@
-<div class="users form">
-<?php echo $this->Form->create('User');?>
-	<fieldset>
-		<legend><?php echo __('Edit User'); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('username');
-		echo $this->Form->input('password');
-		echo $this->Form->input('role');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit'));?>
+<div class="row">
+       
+			<h2>Editar Usuario</h2>
+				<?php 	
+				echo $this->Form->create('User');
+				echo $this->Form->input('nome',array('class'=>'form-control'));
+				echo $this->Form->input('cpf',array('class'=>'cpf form-control'));
+				echo $this->Form->input('username',array('class'=>'form-control','label'=>'E-mail'));
+				echo $this->Form->input('endereco',array('class'=>'form-control'));
+				echo $this->Form->input('telefone',array('class'=>'phone form-control'));
+				$options=array('Funcionario'=>'Funcionario','Cliente'=>'Cliente');
+				$attributes=array('label'=>'Tipo');
+				echo $this->Form->radio('tipo',$options,$attributes);
+				echo "</br>";
+				echo $this->Form->label('Senha');
+				echo $this->Form->password('password',array('label'=>'Senha','class'=>'form-control','maxlength'=>8));
+				$options = array(
+					'label'=>'Salvar alteração',
+					'class'=>'form-control'
+				); 
+				echo "<p>";
+				echo $this->Form->end($options);
+				echo "<p>";
+?>
+	
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
 
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('User.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('User.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index'));?></li>
-	</ul>
-</div>

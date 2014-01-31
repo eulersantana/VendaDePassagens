@@ -4,10 +4,9 @@ class PassagensController extends AppController{
 	public $helpers = array('Html' ,'Form' );
 	public $name = 'Passagens';
 	public $components = array('Session');
-    public $uses = array('Passagem');
 
     private function getRotas(){
-        $rotas = $this->Passagens->Rotas->find('list', array('fields' => array('id','trajeto')));
+        $rotas = $this->Passagem->Rota->find('list', array('fields' => array('id','trajeto')));
         $this->set(compact('rotas'));
     }
    

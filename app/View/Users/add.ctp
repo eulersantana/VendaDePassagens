@@ -1,17 +1,27 @@
-<h1>Adiconar Usuario</h1>
-<?php 	
-echo $this->Form->create('User');
-echo $this->Form->input('nome');
-echo $this->Form->input('cpf',array('class'=>'cpf'));
-echo $this->Form->input('username',array('id'=>'username'));
-echo $this->Form->input('endereco');
-echo $this->Form->input('telefone',array('class'=>'phone'));
-$options=array('Funcionario'=>'Funcionario','Cliente'=>'Cliente');
-$attributes=array('legend'=>false);
-echo $this->Form->label('Tipo:');
-echo $this->Form->radio('tipo',$options,$attributes);
-echo $this->Form->label('Senha:');
-echo $this->Form->password('password',array('maxlength'=>8));
-echo $this->Form->end('Salvar');
+<div class="row">
+       
+			<h2>Adiconar Usuario</h2>
+				<?php 	
+				echo $this->Form->create('User');
+				echo $this->Form->input('nome',array('class'=>'form-control'));
+				echo $this->Form->input('cpf',array('class'=>'cpf form-control'));
+				echo $this->Form->input('username',array('class'=>'form-control','label'=>'E-mail'));
+				echo $this->Form->input('endereco',array('class'=>'form-control'));
+				echo $this->Form->input('telefone',array('class'=>'phone form-control'));
+				$options=array('Funcionario'=>'Funcionario','Cliente'=>'Cliente');
+				$attributes=array('label'=>'Tipo');
+				echo $this->Form->radio('tipo',$options,$attributes);
+				echo "</br>";
+				echo $this->Form->label('Senha');
+				echo $this->Form->password('password',array('label'=>'Senha','class'=>'form-control','maxlength'=>8));
+				$options = array(
+					'label'=>'Salvar',
+					'class'=>'form-control'
+				); 
+				echo "<p>";
+				echo $this->Form->end($options);
+				echo "<p>";
 ?>
+	
+</div>
 
