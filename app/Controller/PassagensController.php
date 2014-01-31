@@ -1,5 +1,6 @@
 <?php
 
+
 class PassagensController extends AppController{
 	public $helpers = array('Html' ,'Form' );
 	public $name = 'Passagens';
@@ -21,7 +22,7 @@ class PassagensController extends AppController{
 
    
 
-
+       
         public function add(){
         	
         	if($this->request->is('post')){

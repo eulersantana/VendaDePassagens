@@ -4,7 +4,6 @@
 		public $name = 'Pagamentos';
 		public $components = array('Session');
 
-
 		private function getPassagens(){
 			$passagens = $this->Pagamento->Passagem->Rota->find('list', array('fields' => array('id','trajeto')));
 			$this->set(compact('passagens'));
