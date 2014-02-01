@@ -12,7 +12,9 @@
         }
        
     	function index(){
-    		 $this->set('passagem', $this->paginate());
+    		$this->set('passagem', $this->paginate());
+            $passagens = $this->paginate('Passagem');
+            //pr($passagens);exit;
     	}
 
     	public function view($id = null) {

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 3.4.10.1deb1
 -- http://www.phpmyadmin.net
 --
--- Servidor: localhost
--- Tempo de Geração: 30/01/2014 às 13:55:51
--- Versão do Servidor: 5.5.27
--- Versão do PHP: 5.4.7
+-- Host: localhost
+-- Generation Time: Feb 01, 2014 at 01:15 PM
+-- Server version: 5.5.34
+-- PHP Version: 5.3.10-1ubuntu3.9
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,29 +17,38 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Banco de Dados: `buypass`
+-- Database: `buypass`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `pagamentos`
+-- Table structure for table `pagamentos`
 --
 
 CREATE TABLE IF NOT EXISTS `pagamentos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `tipo` varchar(45) NOT NULL,
   `valor` float NOT NULL,
   `parcelas` int(11) DEFAULT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '0',
   `valor_parcelas` varchar(45) NOT NULL,
   `passagem_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
   KEY `fk_pagamentos_passagens1_idx` (`passagem_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `pagamentos`
+--
+
+INSERT INTO `pagamentos` (`id`, `tipo`, `valor`, `parcelas`, `status`, `valor_parcelas`, `passagem_id`) VALUES
+(3, 'Leito', 100, 2, 0, '50', 4);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `passagens`
+-- Table structure for table `passagens`
 --
 
 CREATE TABLE IF NOT EXISTS `passagens` (
@@ -49,12 +58,19 @@ CREATE TABLE IF NOT EXISTS `passagens` (
   `rota_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_passagens_rotas1_idx` (`rota_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `passagens`
+--
+
+INSERT INTO `passagens` (`id`, `cliente`, `funcionario`, `rota_id`) VALUES
+(4, 'Tercio', 'Funcionario', 3);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `promocoes`
+-- Table structure for table `promocoes`
 --
 
 CREATE TABLE IF NOT EXISTS `promocoes` (
@@ -68,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `promocoes` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `rotas`
+-- Table structure for table `rotas`
 --
 
 CREATE TABLE IF NOT EXISTS `rotas` (
@@ -78,20 +94,19 @@ CREATE TABLE IF NOT EXISTS `rotas` (
   `data_hora` datetime NOT NULL,
   `pontos` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Extraindo dados da tabela `rotas`
+-- Dumping data for table `rotas`
 --
 
 INSERT INTO `rotas` (`id`, `inicio`, `fim`, `data_hora`, `pontos`) VALUES
-(1, 'Itapua', 'Barra', '2014-01-28 18:20:00', 20),
-(2, 'Barra', 'Salvador', '2014-01-29 14:39:00', 10);
+(3, 'Brasil', 'China', '2014-02-01 12:13:00', 1);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -105,20 +120,21 @@ CREATE TABLE IF NOT EXISTS `users` (
   `tipo` varchar(45) NOT NULL,
   `pontos` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Extraindo dados da tabela `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `nome`, `username`, `cpf`, `endereco`, `telefone`, `password`, `tipo`, `pontos`) VALUES
 (1, 'Euler Santana', 'euler@ufba.br', '133.212.313-21', 'Travessa beira rio', '(12) 3132-1321', '0b8bf062317a8b29a340bf2f22c4e7d4bb2735a5', 'Funcionario', ''),
-(2, 'Marcos', 'marcos@ufba.br', '212.313.213-21', 'Costa Azul', '(13) 2123-1321', '0b8bf062317a8b29a340bf2f22c4e7d4bb2735a5', 'Cliente', '');
+(2, 'Marcos', 'marcos@ufba.br', '212.313.213-21', 'Costa Azul', '(13) 2123-1321', '0b8bf062317a8b29a340bf2f22c4e7d4bb2735a5', 'Cliente', ''),
+(3, 'Tercio', 'tercio', '122.323.123-12', 'udiashsdiah', '(28) 4236-4237', '76be0a174251dc3b4f18840c6816d03582a25e44', 'Funcionario', '');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `veiculos`
+-- Table structure for table `veiculos`
 --
 
 CREATE TABLE IF NOT EXISTS `veiculos` (
@@ -129,39 +145,39 @@ CREATE TABLE IF NOT EXISTS `veiculos` (
   `rota_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_veiculos_rotas1_idx` (`rota_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
--- Extraindo dados da tabela `veiculos`
+-- Dumping data for table `veiculos`
 --
 
 INSERT INTO `veiculos` (`id`, `tipo`, `poltronas_livre`, `poltronas_ocupadas`, `rota_id`) VALUES
-(1, 'Lindo', 50, 0, 1);
+(4, 'leito', 1, 1, 3);
 
 --
--- Restrições para as tabelas dumpadas
+-- Constraints for dumped tables
 --
 
 --
--- Restrições para a tabela `pagamentos`
+-- Constraints for table `pagamentos`
 --
 ALTER TABLE `pagamentos`
   ADD CONSTRAINT `fk_pagamentos_passagens1` FOREIGN KEY (`passagem_id`) REFERENCES `passagens` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Restrições para a tabela `passagens`
+-- Constraints for table `passagens`
 --
 ALTER TABLE `passagens`
   ADD CONSTRAINT `fk_passagens_rotas1` FOREIGN KEY (`rota_id`) REFERENCES `rotas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Restrições para a tabela `promocoes`
+-- Constraints for table `promocoes`
 --
 ALTER TABLE `promocoes`
   ADD CONSTRAINT `fk_promossoes_rotas1` FOREIGN KEY (`rota_id`) REFERENCES `rotas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Restrições para a tabela `veiculos`
+-- Constraints for table `veiculos`
 --
 ALTER TABLE `veiculos`
   ADD CONSTRAINT `fk_veiculos_rotas1` FOREIGN KEY (`rota_id`) REFERENCES `rotas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
