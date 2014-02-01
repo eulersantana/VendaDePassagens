@@ -1,26 +1,47 @@
-<h1>Rotas</h1>
-<table>
+
+<div class="paging">
+	<ul class="nav nav-pills">
+	  <li><?php echo $this->Html->link(__('Novo Rota'), array('action' => 'add')); ?></li>
+	</ul>
+</div>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><?php echo __('Rotas');?></div>
+  <div class="panel-body">
+    <!-- <p>...</p> -->
+  </div>
+	<table class="table">
 	<tr>
-		<th>Id</th>
-		<th>Inicio</th>
-		<th>Fim</th>
-		<th>Pontos</th>
-		<th>Ação</th>
+			<th><?php echo $this->Paginator->sort('#');?></th>
+			<th><?php echo $this->Paginator->sort('Inicio');?></th>
+			<th><?php echo $this->Paginator->sort('Fim');?></th>
+			<th><?php echo $this->Paginator->sort('Pontos');?></th>
+			<th class="actions"><?php echo __('Actions');?></th>
 	</tr>
-	<?php foreach ($rota as $rotas): ?>
+	<?php
+	$i = 0;
+	foreach ($rotas as $rota): ?>
 	<tr>
-		<td><?php echo $rotas['Rota']['id']; ?></td>
-		<td><?php echo $this->Html->link($rotas['Rota']['inicio'],array('controller'=> 'rotas', 'action'=> 'view', $rotas['Rota']['id'])); ?></td>
-		<td><?php echo $rotas['Rota']['fim']; ?></td>
-		<td><?php echo $rotas['Rota']['pontos'];?></td>
-		<td><?php echo $this->Html->link('Edit',array('action' => 'edit', $rotas['Rota']['id'])); ?></td>
-		<td>
-			<?php echo $this->Form->postLink(
-		        'Delete',
-		        array('action' => 'delete', $rotas['Rota']['id']),
-		        array('confirm' => 'Você tem certeza ?'));
-		    ?>
+		<td><?php echo h($rota['Rota']['id']); ?>&nbsp;</td>
+		<td><?php echo h($rota['Rota']['inicio']); ?>&nbsp;</td>
+		<td><?php echo h($rota['Rota']['fim']); ?>&nbsp;</td>
+		<td><?php echo h($rota['Rota']['pontos']); ?>&nbsp;</td>
+		<td class="actions">
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $rota['Rota']['id'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $rota['Rota']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $rota['Rota']['id']), null, __('Are you sure you want to delete # %s?', $rota['Rota']['id'])); ?>
 		</td>
 	</tr>
-<?php endforeach;?>
-</table>
+	<?php endforeach; ?>
+	</table>
+	
+
+	<div class="paging">
+	<?php
+		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'btn btn-default'));
+		echo $this->Paginator->numbers(array('separator' => ''));
+		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'btn btn-default'));
+	?>
+	</div>
+</div>
+

@@ -4,21 +4,25 @@
         public $name = 'Promocoes';
         public $components = array('Session');
 
-         private function getRotas(){
+        private function getRotas(){
+            $rotas = $this->Promocao->Rota->find('list', array('fields' => array('id','trajeto')));
+            $this->set(compact('rotas'));
+        }
+        public function view_action() {
+            // códigos
+            $this->layout = 'layoutPrincipal';
+        }
 
-        $rotas = $this->Promocao->Rota->find('list', array('fields' => array('id','trajeto')));
-        $this->set(compact('rotas'));
-    }
-
-        function index(){
-            
+        function index(){            
             $this->set('promocao', $this->paginate());
+            self::view_action();
         }
 
         function view($id = null){            
 
             $this->Promocao->id = $id;
             $this->set('promocao', $this->Promocao->read());
+            self::view_action();
 
 
         }
@@ -34,6 +38,7 @@
             }
 
             self::getRotas();
+            self::view_action();
         }
 
         function edit($id = null){
@@ -48,6 +53,7 @@
             }
 
             self::getRotas();
+            self::view_action();
         }
 
 

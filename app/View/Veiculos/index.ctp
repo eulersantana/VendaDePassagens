@@ -1,32 +1,49 @@
-<h1>Veículos</h1>
-<table>
+
+<div class="paging">
+	<ul class="nav nav-pills">
+	  <li><?php echo $this->Html->link(__('Novo Veiculo'), array('action' => 'add')); ?></li>
+	</ul>
+</div>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><?php echo __('Veiculos');?></div>
+  <div class="panel-body">
+    <!-- <p>...</p> -->
+  </div>
+	<table class="table">
 	<tr>
-		<th>Id</th>
-		<th>Tipo</th>
-		<th>Poltronas Livres</th>
-		<th>Poltronas Ocupadas</th>
-		<th>Rota associada</th>
-		<th>Ação</th>
+			<th><?php echo $this->Paginator->sort('#');?></th>
+			<th><?php echo $this->Paginator->sort('Tipo');?></th>
+			<th><?php echo $this->Paginator->sort('Poltronas Livre');?></th>
+			<th><?php echo $this->Paginator->sort('Poltronas Ocupadas');?></th>
+			<th><?php echo $this->Paginator->sort('rota_id');?></th>
+			<th class="actions"><?php echo __('Actions');?></th>
 	</tr>
-	<?php foreach ($veiculo as $veiculos): ?>
+	<?php
+	$i = 0;
+	foreach ($veiculos as $veiculo): ?>
 	<tr>
-		<td><?php echo $veiculos['Veiculo']['id']; ?></td>
-		<td><?php echo $this->Html->link($veiculos['Veiculo']['tipo'],array('controller'=> 'veiculos', 'action'=> 'view', $veiculos['Veiculo']['id'])); ?></td>
-		<td><?php echo $veiculos['Veiculo']['poltronas_livre']; ?></td>
-		<td><?php echo $veiculos['Veiculo']['poltronas_ocupadas']; ?></td>
-		<td><?php echo $veiculos['Rota']['inicio'].' - '.$veiculos['Rota']['fim'].' - '.$veiculos['Rota']['data_hora']; ?></td>
-		<td>
-			<?php 
-				echo $this->Form->postLink(
-		        'Delete',
-		        array('action' => 'delete', $veiculos['Veiculo']['id']),
-		        array('confirm' => 'Você tem certeza ?'));
-			?>
+		<td><?php echo h($veiculo['Veiculo']['id']); ?>&nbsp;</td>
+		<td><?php echo h($veiculo['Veiculo']['tipo']); ?>&nbsp;</td>
+		<td><?php echo h($veiculo['Veiculo']['poltronas_livre']); ?>&nbsp;</td>
+		<td><?php echo h($veiculo['Veiculo']['poltronas_ocupadas']); ?>&nbsp;</td>
+		<td><?php echo $veiculo['Rota']['inicio'].' - '.$veiculo['Rota']['fim'].' - '.$veiculo['Rota']['data_hora']; ?></td>
+		<td class="actions">
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $veiculo['Veiculo']['id'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $veiculo['Veiculo']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $veiculo['Veiculo']['id']), null, __('Are you sure you want to delete # %s?', $veiculo['Veiculo']['id'])); ?>
 		</td>
-
-
-
 	</tr>
-<?php endforeach;?>
+	<?php endforeach; ?>
+	</table>
+	
 
-</table>
+	<div class="paging">
+	<?php
+		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'btn btn-default'));
+		echo $this->Paginator->numbers(array('separator' => ''));
+		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'btn btn-default'));
+	?>
+	</div>
+</div>
+

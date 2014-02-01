@@ -9,11 +9,14 @@
 
 			$this->set(compact('rotas'));
 		}
+		public function view_action() {
+		    // códigos
+		    $this->layout = 'layoutPrincipal';
+		}
 
 		function index(){
-			$this->set('veiculo', $this->Veiculo->find('all'));
-
-			//self::getRotas();
+			$this->set('veiculos', $this->paginate());
+			self::view_action();
 		}
 
 		function view($id = null){
@@ -22,7 +25,7 @@
 			$this->Veiculo->id = $id;
             $this->set('veiculo', $this->Veiculo->read());
 
-
+            self::view_action();
 		}
 
 		function add(){
@@ -36,6 +39,7 @@
         	}
 
         	self::getRotas();
+        	self::view_action();
 		}
 
 		function edit($id = null){
@@ -50,6 +54,7 @@
 			}
 
 			self::getRotas();
+			self::view_action();
 		}
 
 
