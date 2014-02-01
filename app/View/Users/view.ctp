@@ -6,29 +6,34 @@
 			<?php echo h($user['User']['id']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('CPF'); ?></dt>
+		<dd>
+			<?php echo h($user['User']['cpf']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('E-mail'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['email']); ?>
+			<?php echo h($user['User']['username']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Password'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['password']); ?>
+			<?php echo "******" ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Role'); ?></dt>
+		<dt><?php echo __('Telefone'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['role']); ?>
+			<?php echo h($user['User']['telefone']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Created'); ?></dt>
+		<dt><?php echo __('Endereço'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['created']); ?>
+			<?php echo h($user['User']['endereco']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
+		<dt><?php echo __('Tipo'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['modified']); ?>
+			<?php echo h($user['User']['tipo']); ?>
 			&nbsp;
 		</dd>
 	</dl>
