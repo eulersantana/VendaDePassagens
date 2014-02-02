@@ -16,6 +16,11 @@
 
 		}
 
+        function view($id = null) {
+            $this->Pagamento->id = $id;
+            $this->set('pagamentos', $this->Pagamento->read());
+        }
+
 		function add(){
 			if($this->request->is('post')){
         		if($this->Pagamento->save($this->request->data)){

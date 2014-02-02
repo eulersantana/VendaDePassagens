@@ -21,6 +21,7 @@
 			<th><?php echo $pagamento['Pagamento']['passagem_id'];?></th>
 			<th>
 				<?php 
+					echo $this->Html->link(__('View'), array('action' => 'view', $pagamento['Pagamento']['id'])); 
 					echo $this->Html->link('Edit',array('action' => 'edit', $pagamento['Pagamento']['id'])); 
 					echo $this->Form->postLink(
 			        'Delete',
