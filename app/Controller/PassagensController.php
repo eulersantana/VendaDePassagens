@@ -14,49 +14,47 @@ class PassagensController extends AppController{
 		 $this->set('passagem', $this->paginate());
 	}
 
-	public function view($id = null) {
-        $this->passagem->id = $id;
+
+	function view($id = null) {
+        $this->Passagem->id = $id;
         $this->set('passagem', $this->Passagem->read());
     }
 
-   
+    public function add(){
+    	
+    	if($this->request->is('post')){
+    	   
+    		if($this->Passagem->save($this->request->data)){
+    			$this->Session->setFlash('passagem salvo com sucesso!');
+    			$this->redirect(array('action'=>'index'));
+    		}
+    	}
 
-       
-        public function add(){
-        	
-        	if($this->request->is('post')){
-        	   
-        		if($this->Passagem->save($this->request->data)){
-        			$this->Session->setFlash('passagem salvo com sucesso!');
-        			$this->redirect(array('action'=>'index'));
-        		}
-        	}
+        self::getRotas();
+    }
 
-            self::getRotas();
-        }
-
-        function edit($id = null){
-            $this->Passagem->id = $id;
-            if($this->request->is('get')) {
-                $this->request->data = $this->Passagem->read();
-            } else {
-                if($this->Passagem->save($this->request->data)) {
-                    $this->Session->setFlash('A passagem foi atualizada com sucesso!');
-                    $this->redirect(array('action' => 'index'));
-                }
-            }
-
-            self::getRotas();
-        }
-
-        function delete($id){
-            if(!$this->request->is('post')){
-                throw new MethodNotAllowedException();
-            }
-            if ($this->Passagem->delete($id)) {
-                $this->Session->setFlash('Passagem deletada com sucesso');
+    function edit($id = null){
+        $this->Passagem->id = $id;
+        if($this->request->is('get')) {
+            $this->request->data = $this->Passagem->read();
+        } else {
+            if($this->Passagem->save($this->request->data)) {
+                $this->Session->setFlash('A passagem foi atualizada com sucesso!');
                 $this->redirect(array('action' => 'index'));
             }
         }
+
+        self::getRotas();
     }
+
+    function delete($id){
+        if(!$this->request->is('post')){
+            throw new MethodNotAllowedException();
+        }
+        if ($this->Passagem->delete($id)) {
+            $this->Session->setFlash('Passagem deletada com sucesso');
+            $this->redirect(array('action' => 'index'));
+        }
+    }
+}
 ?>
