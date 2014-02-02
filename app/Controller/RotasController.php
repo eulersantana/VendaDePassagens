@@ -6,14 +6,19 @@ App::import('Core', 'l10n');
 		public $name = 'Rotas';
 		public $components = array('Session');
 		
-
+		public function view_action() {
+        // códigos
+	        $this->layout = 'layoutPrincipal';
+	    }
 		function index(){
-			$this->set('rota', $this->Rota->find('all'));
+			 $this->set('rotas', $this->paginate());
+			self::view_action();
 		}
 
 		function view($id = null){
 			$this->Rota->id = $id;
             $this->set('rota', $this->Rota->read());
+            self::view_action();
 		}
 
 		function add(){
@@ -23,6 +28,7 @@ App::import('Core', 'l10n');
         			$this->redirect(array('action'=>'index'));
         		}
         	}
+        	self::view_action();
 		}
 
 		function edit($id = null){
@@ -35,6 +41,7 @@ App::import('Core', 'l10n');
 					$this->redirect(array('action' => 'index'));
 				}
 			}
+			self::view_action();
 		}
 
 		/*

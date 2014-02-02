@@ -50,6 +50,8 @@
           <?php echo "<a class='navbar-brand' href=".Router::url('/', true).">BuyPass</a>" ?>
            <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."users/index".">Usuários</a>" ?>
            <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."veiculos/index".">Veiculos</a>" ?>
+           <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."rotas/index".">Rota</a>" ?>
+           <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."promocoes/index".">Promoção</a>" ?>
            
         </div>
         <div class="navbar-collapse collapse">

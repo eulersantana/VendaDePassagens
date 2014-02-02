@@ -1,9 +1,18 @@
-<h1>Adicionar Veículo</h1>
+<div class="row">
+<h2>Adicionar Veículo</h2>
 <?php
 	echo $this->Form->create('Veiculo');
-	echo $this->Form->input('tipo');
-	echo $this->Form->input('rota_id');
-	echo $this->Form->input('poltronas_livre');
-	echo $this->Form->input('poltronas_ocupadas');
-	echo $this->Form->end('Salvar');
+	echo $this->Form->input('tipo',array('class'=>'form-control'));
+	echo $this->Form->input('rota_id',array('class'=>'form-control'));
+	echo $this->Form->input('poltronas_livre',array('class'=>'form-control'));
+	echo $this->Form->input('poltronas_ocupadas',array('class'=>'form-control'));
+	$options = array(
+					'label'=>'Salvar',
+					'class'=>'form-control',
+					'style'=>'width: 100px'
+				); 
+	echo "<p>";
+	echo $this->Form->end($options);
+	echo "</p>"
 ?>
+</div>

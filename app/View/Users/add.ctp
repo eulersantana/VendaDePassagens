@@ -16,7 +16,8 @@
 				echo $this->Form->password('password',array('label'=>'Senha','class'=>'form-control','maxlength'=>8));
 				$options = array(
 					'label'=>'Salvar',
-					'class'=>'form-control'
+					'class'=>'form-control',
+					'style'=>'width: 100px'
 				); 
 				echo "<p>";
 				echo $this->Form->end($options);

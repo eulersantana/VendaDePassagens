@@ -14,6 +14,10 @@
 
 			$this->set(compact('rotas'));
 		}
+		public function view_action() {
+		    // códigos
+		    $this->layout = 'layoutPrincipal';
+		}
 
 		function index(){
 			$this->set('veiculos', $this->Veiculo->find('all'));
@@ -27,7 +31,7 @@
 			$this->Veiculo->id = $id;
             $this->set('veiculos', $this->Veiculo->read());
 
-
+            self::view_action();
 		}
 
 		function add(){
@@ -41,6 +45,7 @@
         	}
 
         	self::getRotas();
+        	self::view_action();
 		}
 
 		function edit($id = null){
@@ -55,6 +60,7 @@
 			}
 
 			self::getRotas();
+			self::view_action();
 		}
 
 
