@@ -1,25 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-    class PassagensController extends AppController{
-    	public $helpers = array('Html' ,'Form' );
-    	public $name = 'Passagens';
-    	public $components = array('Session');
-       // public $uses = array('Passagem');
-
-        private function getRotas(){
-            $rotas = $this->Passagem->Rota->find('list', array('fields' => array('id','trajeto')));
-            $this->set(compact('rotas'));
-        }
-       
-    	function index(){
-    		$this->set('passagem', $this->paginate());
-            $passagens = $this->paginate('Passagem');
-            //pr($passagens);exit;
-    	}
-=======
->>>>>>> 64fa38e73a8e31efe6eccd4e41ca6e4ac9880c22
-
 class PassagensController extends AppController{
 	public $helpers = array('Html' ,'Form' );
 	public $name = 'Passagens';
