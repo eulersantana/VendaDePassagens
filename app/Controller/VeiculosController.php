@@ -4,6 +4,11 @@
 		public $name = 'Veiculos';
 		public $components = array('Session');
 
+		public function view_action() {
+	        // códigos
+	        $this->layout = 'layoutPrincipal';
+    	}
+
 		private function getRotas(){
 			$rotas = $this->Veiculo->Rota->find('list', array('fields' => array('id','trajeto')));
 
@@ -11,8 +16,8 @@
 		}
 
 		function index(){
-			$this->set('veiculo', $this->Veiculo->find('all'));
-
+			$this->set('veiculos', $this->Veiculo->find('all'));
+			self::view_action();
 			//self::getRotas();
 		}
 
@@ -20,7 +25,7 @@
 			
 
 			$this->Veiculo->id = $id;
-            $this->set('veiculo', $this->Veiculo->read());
+            $this->set('veiculos', $this->Veiculo->read());
 
 
 		}
