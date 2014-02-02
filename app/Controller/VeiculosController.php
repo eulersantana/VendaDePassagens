@@ -14,13 +14,10 @@
 
 			$this->set(compact('rotas'));
 		}
-		public function view_action() {
-		    // códigos
-		    $this->layout = 'layoutPrincipal';
-		}
+
 
 		function index(){
-			$this->set('veiculos', $this->Veiculo->find('all'));
+			$this->set('veiculos', $this->paginate());
 			self::view_action();
 			//self::getRotas();
 		}
