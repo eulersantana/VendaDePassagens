@@ -23,9 +23,10 @@ App::import('Core', 'l10n');
 
 		function add(){
 			if($this->request->is('post')){
-        		if($this->Rota->save($this->request->data)){
-        			$this->Session->setFlash('Rota salva com sucesso!');
-        			$this->redirect(array('action'=>'index'));
+				
+				if($this->Rota->save($this->request->data)){
+					$this->Session->setFlash('passagem salvo com sucesso!');
+    				$this->redirect(array('action'=>'index'));
         		}
         	}
         	self::view_action();

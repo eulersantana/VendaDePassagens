@@ -11,7 +11,7 @@
 	   	// 		)
 	   	// 	);
 
-	   	public $belongsTo = array('Rota');
+	   	public $hasOne = array('Passagem');
 
 	   	# public $validate = 	array(
 	   	# 	'tipo' => array(

@@ -21,11 +21,11 @@
 			<?php echo h($veiculos['Veiculo']['poltronas_ocupadas']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Rota'); ?></dt>
-		<dd>
-			<?php echo $veiculos['Rota']['inicio'].' - '.$veiculos['Rota']['fim'].' - '.$veiculos['Rota']['data_hora']; ?>
+		<!-- <dt><?php //echo __('Rota'); ?></dt> -->
+		<!-- <dd>
+			<?php //echo $veiculos['Rota']['inicio'].' - '.$veiculos['Rota']['fim'].' - '.$veiculos['Rota']['data_hora']; ?>
 			&nbsp;
-		</dd>
+		</dd> -->
 	</dl>
 </div>
 

@@ -1,27 +1,19 @@
 
+<h2>Adicionar Pagamento</h2>
+<?php
+	echo $this->Form->create('pagamento');
+	echo $this->Form->input('parcela');
+	echo $this->Form->input('status');
+	echo $this->Form->input('valor_parcelas');
+	$options = array(
+			'label'=>'Salvar',
+			'class'=>'form-control',
+			'style'=>'width: 100px'
+		); 
+	echo "<p>";
+	echo $this->Form->end($options);
+	echo "<p>";
+?>
+	
 
-<div class="row">
-	<div class="col-lg-12">
-		<h3>Adicionar Pagamento</h3>
-		<?php
-			echo $this->Form->create('Pagamento');
-			echo "<div class='input-group'>";
-						echo $this->Form->input('',array('class'=>'form-control','type'=>'text'));
-			echo "<span class='input-group-addon'>.00</span>".
-					"</div>";
-			echo $this->Form->input('parcela');
-			echo $this->Form->input('status');
-			echo $this->Form->input('valor_parcelas');
-			echo $this->Form->input('passagem_id',array('label' => 'Comprador'));
-			$options = array(
-					'label'=>'Salvar',
-					'class'=>'form-control',
-					'style'=>'width: 100px'
-				); 
-			echo "<p>";
-			echo $this->Form->end($options);
-			echo "<p>";
-		?>
-	</div>
-</div>
 

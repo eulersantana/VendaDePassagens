@@ -9,11 +9,11 @@
 	        $this->layout = 'layoutPrincipal';
     	}
 
-		private function getRotas(){
-			$rotas = $this->Veiculo->Rota->find('list', array('fields' => array('id','trajeto')));
+		// private function getRotas(){
+		// 	$rotas = $this->Veiculo->Rota->find('list', array('fields' => array('id','trajeto')));
 
-			$this->set(compact('rotas'));
-		}
+		// 	$this->set(compact('rotas'));
+		// }
 
 
 		function index(){
@@ -41,7 +41,7 @@
         		}
         	}
 
-        	self::getRotas();
+        	// self::getRotas();
         	self::view_action();
 		}
 
@@ -56,7 +56,7 @@
 				}
 			}
 
-			self::getRotas();
+			// self::getRotas();
 			self::view_action();
 		}
 

@@ -24,6 +24,8 @@ class UsersController extends AppController {
         self::view_action();
     }
 
+    
+
     public function logout() {
         if($this->Auth->logout()){
             $this->redirect(Router::url('/',true));

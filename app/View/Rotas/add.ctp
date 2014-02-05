@@ -2,6 +2,7 @@
 	<h2>Adicionar Rota</h2>
 <?php 	
 	echo $this->Form->create('Rota');
+	echo $this->Form->input('valor',array('type'=>'text','class'=>'form-control'));
 	echo $this->Form->input('inicio',array('class'=>'form-control'));
 	echo $this->Form->input('fim',array('class'=>'form-control'));
 	echo $this->Form->label('Data e hora');

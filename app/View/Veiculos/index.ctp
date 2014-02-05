@@ -15,7 +15,7 @@
 			<th><?php echo $this->Paginator->sort('Tipo');?></th>
 			<th><?php echo $this->Paginator->sort('Poltronas Livre');?></th>
 			<th><?php echo $this->Paginator->sort('Poltronas Ocupadas');?></th>
-			<th><?php echo $this->Paginator->sort('rota_id');?></th>
+			<!-- <th><?php //echo $this->Paginator->sort('rota_id');?></th> -->
 			<th class="actions"><?php echo __('Actions');?></th>
 	</tr>
 	<?php
@@ -26,7 +26,7 @@
 		<td><?php echo h($veiculo['Veiculo']['tipo']); ?>&nbsp;</td>
 		<td><?php echo h($veiculo['Veiculo']['poltronas_livre']); ?>&nbsp;</td>
 		<td><?php echo h($veiculo['Veiculo']['poltronas_ocupadas']); ?>&nbsp;</td>
-		<td><?php echo $veiculo['Rota']['inicio'].' - '.$veiculo['Rota']['fim'].' - '.$veiculo['Rota']['data_hora']; ?></td>
+		<!-- <td><?php //echo $veiculo['Rota']['inicio'].' - '.$veiculo['Rota']['fim'].' - '.$veiculo['Rota']['data_hora']; ?></td> -->
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $veiculo['Veiculo']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $veiculo['Veiculo']['id'])); ?>

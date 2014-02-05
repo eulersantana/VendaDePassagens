@@ -13,6 +13,7 @@
 	<table class="table">
 	<tr>
 			<th><?php echo $this->Paginator->sort('#');?></th>
+			<th><?php echo $this->Paginator->sort('Valor');?></th>
 			<th><?php echo $this->Paginator->sort('Inicio');?></th>
 			<th><?php echo $this->Paginator->sort('Fim');?></th>
 			<th><?php echo $this->Paginator->sort('Pontos');?></th>
@@ -23,6 +24,7 @@
 	foreach ($rotas as $rota): ?>
 	<tr>
 		<td><?php echo h($rota['Rota']['id']); ?>&nbsp;</td>
+		<td><?php echo h($rota['Rota']['valor']); ?>&nbsp;</td>
 		<td><?php echo h($rota['Rota']['inicio']); ?>&nbsp;</td>
 		<td><?php echo h($rota['Rota']['fim']); ?>&nbsp;</td>
 		<td><?php echo h($rota['Rota']['pontos']); ?>&nbsp;</td>

@@ -22,7 +22,9 @@
         echo $this->Html->script('jquery');
         echo $this->Html->script('jquery.maskedinput'); 
         echo $this->Html->script('mascara');
-
+        echo $this->Html->script('jquery.ajaxRotas');
+        
+        echo $this->Js->writeBuffer(array("cache"=>TRUE));
 
     ?>
     <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -33,7 +35,6 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-     
   </head>
 
   <body>
@@ -47,12 +48,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <?php echo "<a class='navbar-brand' href=".Router::url('/', true).">BuyPass</a>" ?>
-           <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."users/index".">Usuários</a>" ?>
-           <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."veiculos/index".">Veiculos</a>" ?>
-           <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."rotas/index".">Rota</a>" ?>
-           <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."promocoes/index".">Promoção</a>" ?>
-           
+          <?php 
+            if($this->Session->read('Auth.User.tipo') == "Funcionario"){ ?>
+             <?php echo "<a class='navbar-brand' href=".Router::url('/', true).">BuyPass</a>" ?>
+             <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."users/index".">Usuários</a>" ?>
+             <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."veiculos/index".">Veiculos</a>" ?>
+             <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."rotas/index".">Rota</a>" ?>
+             <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."promocoes/index".">Promoção</a>" ?>
+          <?php }else{ ?>
+             <?php echo "<a class='navbar-brand' href=".Router::url('/', true).">BuyPass</a>" ?>
+             <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."clientes/edit/".$this->Session->read('Auth.User.id').">Usuários</a>" ?>
+             <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."passagens/add".">Comprar</a>" ?>
+
+          <?php } ?>
         </div>
         <div class="navbar-collapse collapse">
             
@@ -112,7 +120,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <?php //echo $this->element('sql_dump'); 
-   
     echo $this->Html->script('bootstrap');
     ?>
   </body>

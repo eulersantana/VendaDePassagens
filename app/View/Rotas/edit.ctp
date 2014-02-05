@@ -2,6 +2,7 @@
 	<h2>Editar Rota</h2>
 <?php 	
 	echo $this->Form->create('Rota',array('action'=>'edit'));
+	echo $this->Form->input('valor',array('type'=>'text','class'=>'form-control'));
 	echo $this->Form->input('inicio',array('class'=>'form-control'));
 	echo $this->Form->input('fim',array('class'=>'form-control'));
 	echo $this->Form->label('Data e hora');
@@ -9,8 +10,7 @@
 	echo $this->Form->input('',array(
 				'type' => 'datetime',
 				'dateFormat' => 'DMY',
-				'minYear' => date('Y') - 40,
-				'style'=>'width: 100px;'));
+				'minYear' => date('Y') - 40));
 	echo '</div>';
 	echo $this->Form->input('pontos',array('class'=>'form-control','type'=>'text'));
 	

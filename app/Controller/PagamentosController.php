@@ -4,15 +4,17 @@
 		public $name = 'Pagamentos';
 		public $components = array('Session');
 
-		private function getPassagens(){
-			$passagens = $this->Pagamento->Passagem->find('list', array('fields' => array('id')));
-			$this->set(compact('passagens'));
-		}
+        public function view_action() {
+            // códigos
+            $this->layout = 'layoutPrincipal';
+        }
+
 
 		function index(){
-			$this->set('pagamentos', $this->Pagamento->find('all'));
+			$this->set('pagamentos', $this->paginate());
 			$pagamentos = $this->paginate('Pagamento');
 			//pr($pagamentos);exit;
+            self::view_action();
 
 		}
 
@@ -28,7 +30,7 @@
         			$this->redirect(array('action'=>'index'));
         		}
         	}
-        	self::getPassagens();
+            self::view_action();
 		}
 
         function edit($id = null){
@@ -43,6 +45,7 @@
             }
 
             self::getPassagens();
+            self::view_action();
         }
 
         function delete($id){
