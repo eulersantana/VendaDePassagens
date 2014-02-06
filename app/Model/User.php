@@ -3,7 +3,12 @@ App::uses('AuthComponent', 'Controller/Component');
 
 class User extends AppModel{
 	public $name = 'User';
-    public $hasOne = array('Compra');
+    public $hasOne = array(
+        'Compra' => array(
+            'className' => 'Compra',
+            'foreignKey' => 'user_id'
+            )
+        );
     public $validate = array(
         'username' => array(
             'required' => array(

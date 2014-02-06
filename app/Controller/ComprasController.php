@@ -7,6 +7,21 @@
 		public $components = array('Session');
 		public $name = 'Compras';
 		
+
+        function view_action() {
+            $this->layout = 'layoutPrincipal';
+        }
+
+        function getCompras(){
+            $this->set('compras_cliente', $this->Compra->find('all'));
+        }
+
+        function index(){
+            //$this->set('compras', $this->Compra->find('all'));
+            $this->set('compras', $this->paginate());
+            self::view_action();
+        }
+
 		function add(){
 			if($this->request->is('post')){
         		if($this->Compra->save($this->request->data)){
@@ -40,6 +55,15 @@
                 $this->Session->setFlash('Compra deletado com sucesso');
                 $this->redirect(Router::url('/',true));
             }
+        }
+
+        function view_rota($id){
+            $this->Compra->Passagem->Rota->id = $id;
+            $this->set('rotas', $this->Compra->Passagem->Rota->read());
+
+            self::view_action();
+            self::getCompras();
+            self::index();
         }
 	}
  ?>
