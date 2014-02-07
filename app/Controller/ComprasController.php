@@ -6,7 +6,14 @@
 	{	public $helpers = array('Html','Form');
 		public $components = array('Session');
 		public $name = 'Compras';
+        var $uses = array('Passagem','Rota');
+
 		
+        public function beforeFilter() {
+            parent::beforeFilter();
+            $this->Auth->deny('index','add');
+
+        }
 
         function view_action() {
             $this->layout = 'layoutPrincipal';
@@ -16,10 +23,20 @@
             $this->set('compras_cliente', $this->Compra->find('all'));
         }
 
+        function getRota($id = null){
+            $this->Rota->id = $id;
+            if($this->request->is('get')) {
+                $this->request->data = $this->Rota->read(); 
+            }
+            
+        }
+
         function index(){
             //$this->set('compras', $this->Compra->find('all'));
             $this->set('compras', $this->paginate());
+            $this->set(self::getRota($this->Session->read('Auth.Compra.passagem_rota_id')),$this->paginate());
             self::view_action();
+
         }
 
 		function add(){
@@ -29,6 +46,7 @@
         			$this->redirect(Router::url('/',true));
         		}
         	}
+
             self::view_action();
 		}
 

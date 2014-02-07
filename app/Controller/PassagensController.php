@@ -42,6 +42,8 @@ class PassagensController extends AppController{
         self::view_action();
     }
 
+    
+
     public function add(){
             	 
     	if($this->request->is('post')){
