@@ -75,13 +75,14 @@
             }
         }
 
-        function view_rota($id){
-            $this->Compra->Passagem->Rota->id = $id;
-            $this->set('rotas', $this->Compra->Passagem->Rota->read());
-
-            self::view_action();
-            self::getCompras();
-            self::index();
+        public function view($id = null) {
+           
+            $this->Compra->user_id = $id;
+            // if (!$this->Compra->exists()) {
+            //     throw new NotFoundException(__('Compra não existe'));
+            // }
+            $this->set('user', $this->Compra->read(null, $id));
+             self::view_action();
         }
 	}
  ?>

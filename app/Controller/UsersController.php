@@ -5,7 +5,7 @@ class UsersController extends AppController {
     
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('add','logout', 'loggedout');
+        $this->Auth->allow('add','logout', 'loggedout','login');
 
     }
 
@@ -18,7 +18,9 @@ class UsersController extends AppController {
         if ($this->Auth->login()) {
             $this->redirect($this->Auth->redirect());
         } else {
-            $this->Session->setFlash(__('Usuario ou Senha invalidos.'));
+            $this->Session->setFlash(
+                __('E-mail ou senha invalido!' ),
+                'default',array('class'=>'error'));
         }
         self::view_action();
     }
@@ -44,7 +46,7 @@ class UsersController extends AppController {
     }
 
     public function view($id = null) {
-        $this->User->id = $id;
+        $this->User->user_id = $id;
         if (!$this->User->exists()) {
             throw new NotFoundException(__('Invalid user'));
         }

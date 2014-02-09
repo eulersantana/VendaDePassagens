@@ -3,6 +3,7 @@ App::uses('AuthComponent', 'Controller/Component');
 
 class User extends AppModel{
 	public $name = 'User';
+
     public $hasOne = array(
         'Compra' => array(
             'className' => 'Compra',
@@ -11,24 +12,27 @@ class User extends AppModel{
         );
     public $validate = array(
         'username' => array(
+            'required'   => true,
             'required' => array(
-                'rule' => array('notEmpty'),
+                'rule' => array('notEmpty'),                
                 'message' => 'E-mail obrigatorio.'
             )
         ),
         'password' => array(
+            'required'   => true,
             'required' => array(
-                'rule' => array('notEmpty'),
-                'message' => 'Senha obrigatorio.'
-            )
-        ),
-        'tipo' => array(
-            'valid' => array(
-                'rule' => array('inList', array('Funcionario', 'Cliente')),
-                'message' => 'Please enter a valid role',
-                'allowEmpty' => false
-            )
-        )
+                        'rule' => array('notEmpty'),
+                        'message' => 'Senha obrigatorio.'
+                    )
+            ),
+            'between'=>array(
+                'rule'=>array('between',6,8),
+                'required' => array(
+                        'rule' => array('notEmpty'),
+                        'message' => 'Senha entre 6 a 8 dígitos.'
+                           ),
+            ),
+        'username' => 'email',
     );
 
 

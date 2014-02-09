@@ -11,7 +11,8 @@ $(document).ready(function(){
    $(".phone").mask("(99) 9999-9999");
    $(".rg").mask("999.999.99-99");
    $(".cpf").mask("999.999.999-99");
-   $('.money').mask("#.###.###,##", {reverse: true, maxlength: true});
+   $('.money').mask("#.###.###", {reverse: true, maxlength: true});
+   $('.ponts').mask("####", {reverse: true, maxlength: true});
    $( ".datepicker" ).datepicker({
         dateFormat: 'dd/mm/yy',
         dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],

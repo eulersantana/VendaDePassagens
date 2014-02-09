@@ -18,7 +18,7 @@
         echo $this->fetch('meta');
         echo $this->fetch('css');
         echo $this->fetch('script');
-        
+      
         echo $this->Html->script('jquery');
         echo $this->Html->script('jquery.maskedinput'); 
         echo $this->Html->script('mascara');
@@ -56,9 +56,16 @@
              <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."rotas/index".">Rota</a>" ?>
              <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."promocoes/index".">Promoção</a>" ?>
           <?php }else{ ?>
-             <?php echo "<a class='navbar-brand' href=".Router::url('/', true).">BuyPass</a>" ?>
-             <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."clientes/edit/".$this->Session->read('Auth.User.id').">Usuários</a>" ?>
-             <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."passagens/add".">Comprar</a>" ?>
+                      <?php if($this->Session->read('Auth.User.tipo') == "Clinete"){ ?>
+                                 <?php echo "<a class='navbar-brand' href=".Router::url('/', true).">BuyPass</a>" ?>
+                                 <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."clientes/edit/".$this->Session->read('Auth.User.id').">Usuários</a>" ?>
+                                 <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."passagens/add".">Comprar</a>" ?>
+                                 <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."compras".">Historico de Compra</a>" ?>
+                      <?php }else{ ?>
+                                <?php echo "<a class='navbar-brand' href=".Router::url('/', true).">BuyPass</a>" ?>
+                                <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."clientes/edit/".$this->Session->read('Auth.User.id').">Usuários</a>" ?>
+                                <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."passagens/add".">Comprar</a>" ?>
+                      <?php } ?>
 
           <?php } ?>
         </div>
@@ -77,11 +84,13 @@
         </div>
         <!--/.navbar-collapse -->
       </div>
+
     </div>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
-      <div class="container">       
+      <div class="container">
+        <p><?php echo $this->Session->flash();?></p>       
         <p><?php echo $this->fetch('botao'); ?></p>
       </div>
     </div>
@@ -120,7 +129,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <?php //echo $this->element('sql_dump'); 
-    echo $this->Html->script('bootstrap');
+    // echo $this->Html->script('bootstrap');
     ?>
   </body>
 </html>
