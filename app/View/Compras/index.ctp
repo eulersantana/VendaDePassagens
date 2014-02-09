@@ -9,6 +9,7 @@
 	//print_r($this->Auth->user ( 'username' ));
 ?>
 <table class="table">
+	
 	<tr>
 		<th><?php echo $this->Paginator->sort('Trajeto - Data e Hora');?></th>
 		<th><?php echo $this->Paginator->sort('Valor');?></th>	
@@ -16,6 +17,7 @@
 		<th><?php echo $this->Paginator->sort('Tipo de pagamento');?></th>		
 		<th><?php echo $this->Paginator->sort('Veiculo');?></th>
 		<th><?php echo $this->Paginator->sort('Status');?></th>
+		<th><?php echo $this->Paginator->sort('Segunda Via');?></th>
 		
 	</tr>
 	<?php foreach ($compras as $compra ) { ?>
@@ -37,6 +39,7 @@
 			}else{
 				echo "<span class='glyphicon glyphicon-remove'>Apagar</span>";
 			};?></td>
+			<td><?php echo '<span class="glyphicon glyphicon-print">'.'  '. $this->Html->link('Imprimi',array('action'=>'geraPDF',$compra['Passagem']['id'])).'</span>';?></td>
 
 	</tr>
 		<?php } ?>

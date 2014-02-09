@@ -7,7 +7,7 @@ class PassagensController extends AppController{
 	public $name = 'Passagens';
 	public $components = array('Session','RequestHandler');
     public $hasOne = array('Veiculo');
-    var $uses = array('Pagamento','Passagem','Compra','Veiculo');
+    var $uses = array('Pagamento','Passagem','Compra','Veiculo','User');
 
 
     public function view_action() {
@@ -26,9 +26,7 @@ class PassagensController extends AppController{
 
     public function lista_rotas_json() {
         $this->layout = null;       
-             $this->set('rotas', $this->Passagem->Rota->find('all'));
-        
-       
+             $this->set('rotas', $this->Passagem->Rota->find('all'));      
         
     }
    
@@ -56,17 +54,24 @@ class PassagensController extends AppController{
             
             $passagem = array('rota_id'=>$this->request->data['Passagem']['rotas_id'],'veiculo_id'=>$this->request->data['Passagem']['veiculo_id'],'cliente'=>$this->request->data['Passagem']['cliente'],'funcionario'=>$this->request->data['Passagem']['funcionario'],'pagamento_id'=>"");
           
-            print_r($passagem);
+            
             if($this->Pagamento->save($pagamentoInfo)){
                 $pagamento_id =  $this->Pagamento->getLastInsertId();
                 $passagem['pagamento_id'] = $pagamento_id;
-                pr($passagem);
+               
                 if($this->Passagem->save($passagem)){
                     $passagem_id =  $this->Passagem->getLastInsertId();
                     $userId['passagem_id'] = $passagem_id;
                     $userId['passagem_rota_id'] = $this->request->data['Passagem']['rotas_id'];
-                    if($this->Compra->save($userId)){   
-                        $this->redirect(array('action'=>'view'));
+                    
+                    if($this->Compra->save($userId)){  
+                        $user = $this->User->findById($this->Session->read('Auth.User.id'));
+
+                        $user['User']['pontos'] = (int)$user['User']['pontos'] + (int)$this->Rota->findById($this->request->data['Passagem']['rotas_id'])['Rota']['pontos'];
+                        unset($user['User']['password']);
+                        
+                        $this->User->save($user);
+                        $this->redirect(array('action'=>'view',$passagem_id));
                     }
 
                 } 
@@ -96,7 +101,7 @@ class PassagensController extends AppController{
             throw new NotFoundException(__('Invalid passagem'));
         }
         $this->set('passagem', $passagem);
-       
+        self::view_action();
     }
 
     function geraPDF($id){ 
@@ -160,13 +165,17 @@ EOD;
         self::view_action();
     }
 
-    function delete($id){
-        if(!$this->request->is('post')){
-            throw new MethodNotAllowedException();
-        }
-        if ($this->Passagem->delete($id)) {
+    public function delete($id,$id_rota){
+        
+        // if(!$this->request->is('post')){
+        //     throw new MethodNotAllowedException();
+        // }
+        $this->Passagem->id = $id;
+        $this->Passagem->rotas_id = $id_rota;
+   
+        if ($this->Passagem->delete() ){
             $this->Session->setFlash('Passagem deletada com sucesso');
-            $this->redirect(array('action' => 'index'));
+            $this->redirect(Router::url('/',true));
         }
     }
 }
