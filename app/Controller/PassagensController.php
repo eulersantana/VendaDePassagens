@@ -165,18 +165,30 @@ EOD;
         self::view_action();
     }
 
-    public function delete($id,$id_rota){
+    public function delete($id,$id_rota,$pontos,$pessoa){
         
+        $user = $this->User->findById($pessoa);
+        if( ($user['User']['pontos'] != 0)){
+            if( ($user['User']['pontos'] < $pontos)){
+                $user['User']['pontos'] = 0;
+            }else{
+                $user['User']['pontos'] = $user['User']['pontos'] - $pontos;
+            }
+        }
+            
+
+        
+        
+        unset($this->request->data['User']['password']);
         // if(!$this->request->is('post')){
         //     throw new MethodNotAllowedException();
         // }
-        $this->Passagem->id = $id;
-        $this->Passagem->rotas_id = $id_rota;
-   
-        if ($this->Passagem->delete() ){
-            $this->Session->setFlash('Passagem deletada com sucesso');
-            $this->redirect(Router::url('/',true));
-        }
+        $this->User->save($user);        
+        $this->Compra->query('DELETE FROM `buypass`.`compras` WHERE passagem_id ='.$id .' AND passagem_rota_id ='.$id_rota.' ;');
+        $this->Passagem->query('DELETE FROM `buypass`.`passagens` WHERE id ='.$id .';');
+        $this->Session->setFlash('Passagem deletada com sucesso');
+        $this->redirect(Router::url('/',true));
+       
     }
 }
 ?>

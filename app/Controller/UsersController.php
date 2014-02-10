@@ -27,7 +27,7 @@ class UsersController extends AppController {
 
      public function lista_user() {
         $this->layout = null;       
-        $this->set('user', $this->User->find('list',array('fields'=>array('id','pontos'))));      
+        $this->set('user', $this->User->find('all'));      
         
     }
 

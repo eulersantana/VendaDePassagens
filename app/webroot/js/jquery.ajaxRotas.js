@@ -30,6 +30,40 @@ function valores(){
     }
 }
 
+  
+function pontos(){
+    var newURL = window.location.host + window.location.pathname;
+    if(newURL.length == 27){
+        $.getJSON("users/lista_user",function(data){ 
+            for(var i = 0; i < data.length; i++){ 
+                if(data[i]['User']['nome'] == $('#nome').html()){
+                    $("#pontos").html(data[i]['User']['pontos']);
+                }
+            }
+        });
+    }else{
+        if(newURL.length == 40){
+            $.getJSON("../users/lista_user",function(data){ 
+            for(var i = 0; i < data.length; i++){ 
+                if(data[i]['User']['nome'] == $('#nome').html()){
+                    $("#pontos").html(data[i]['User']['pontos']);
+                }
+            }
+        });
+        }else{
+            $.getJSON("../../users/lista_user",function(data){ 
+            for(var i = 0; i < data.length; i++){ 
+                if(data[i]['User']['nome'] == $('#nome').html()){
+                    $("#pontos").html(data[i]['User']['pontos']);
+                }
+            }
+        });
+        }
+    }
+        
+    
+}
+
 function subTotal(){
  
         var sub_total = $('#valor').val();

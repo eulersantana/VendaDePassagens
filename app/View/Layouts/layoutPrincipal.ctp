@@ -37,7 +37,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body onload="pontos()">
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -82,10 +82,10 @@
                 
                 echo $this->Html->link('Sair','../users/logout',array('class'=>'btn btn-primary btn-lg navbar-right','role'=>'button'));
                 echo '<button type="button" class="btn btn-default btn-lg navbar-right">
-                  <span class="glyphicon glyphicon-circle-arrow-up"></span> Pontos'. $this->Session->read('Auth.User.pontos').'
+                  <span class="glyphicon glyphicon-circle-arrow-up"></span>'.' <span id="pontos"></span> '.'Pontos
                 </button>';
                 echo '<button type="button" class="btn btn-default btn-lg navbar-right">
-                  <span class="glyphicon glyphicon-user"> </span>'.$this->Session->read('Auth.User.nome').'</button>';
+                  <span class="glyphicon glyphicon-user"> </span>'.'<span id="nome">'.$this->Session->read('Auth.User.nome').'</span></button>';
                 
               }
                 ?>

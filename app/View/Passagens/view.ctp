@@ -39,8 +39,8 @@
 		 </li>
 		 <li class="previous"><?php echo $this->Html->link('Pagina Inicial',Router::url('/',true));	 ?>
 		 </li>
-		 <!--  <li class="previous"><?php #echo $this->Html->link('Concelar compra',array('action' => 'delete', $passagem['Passagem']['id'],$passagem['Passagem']['id']), null, __('Gostaria de cancela sua compra # %s?', $passagem['Passagem']['rota_id']));	 ?>
-		 </li> -->
+		 <li class="previous"><?php echo $this->Html->link('Concelar compra',array('action' => 'delete', $passagem['Passagem']['id'],$passagem['Passagem']['rota_id'],$passagem['Rota']['pontos'],$passagem['Compra']['user_id']), null, __('Gostaria de cancela sua compra '));	 ?>
+		 </li> 
 	</ul>
 </div>
 
