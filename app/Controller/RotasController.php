@@ -22,9 +22,12 @@ App::import('Core', 'l10n');
 		}
 
 		function add(){
+			
 			if($this->request->is('post')){
+				$data_hora = $this->request->data['Rota'][2]['year'].'-'.$this->request->data['Rota'][1]['month'].'-'.$this->request->data['Rota'][0]['day'].' '.$this->request->data['Rota'][3]['hour'].'-'.$this->request->data['Rota'][4]['min'];
 				
-				if($this->Rota->save($this->request->data)){
+				$rota = array('valor'=>$this->request->data['Rota']['valor'],'inicio'=>$this->request->data['Rota']['inicio'],'fim'=>$this->request->data['Rota']['fim'],'data_hora'=>$data_hora,'pontos'=>$this->request->data['Rota']['pontos']);
+				if($this->Rota->save($rota)){
 					$this->Session->setFlash('passagem salvo com sucesso!');
     				$this->redirect(array('action'=>'index'));
         		}

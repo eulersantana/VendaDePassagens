@@ -1,5 +1,4 @@
 
-<?php echo $this->Session->flash('auth'); ?>
 <?php echo $this->Form->create('User');?>
     <fieldset>
         <legend><?php echo __(''); ?></legend>
@@ -14,10 +13,13 @@
     </fieldset>
 <?php $options = array(
 		'label'=>'Logar',
-		'class'=>'form-control'
+		'class'=>'form-control',
+        'style'=>'width:100px;'
 	); 
 	echo "<p>";
 	echo $this->Form->end($options);
+
+    echo '<p>'.$this->Html->link('Cadastre-se',array('class'=>'form-control','controller'=>'Clientes','action'=>'add')).'</p>';
 	echo "</p>";
 	?>
 

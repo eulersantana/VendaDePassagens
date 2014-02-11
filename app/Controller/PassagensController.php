@@ -1,10 +1,13 @@
 <?php
+
+App::import('Vendor','xtcpdf'); 
 App::uses('AppController', 'Controller');
 class PassagensController extends AppController{
 	public $helpers = array('Html' ,'Form', 'Js' );
 	public $name = 'Passagens';
 	public $components = array('Session','RequestHandler');
-    var $uses = array('Pagamento','Passagem','Compra','Veiculo');
+    public $hasOne = array('Veiculo');
+    var $uses = array('Pagamento','Passagem','Compra','Veiculo','User');
 
 
     public function view_action() {
@@ -23,9 +26,7 @@ class PassagensController extends AppController{
 
     public function lista_rotas_json() {
         $this->layout = null;       
-             $this->set('rotas', $this->Passagem->Rota->find('all'));
-        
-       
+             $this->set('rotas', $this->Passagem->Rota->find('all'));      
         
     }
    
@@ -34,13 +35,10 @@ class PassagensController extends AppController{
          self::view_action();
 	}
 
+    private function getRota($id = null){
+        $this->Rota->id = $id;
 
-
-	function view($id = null) {
-        $this->Passagem->id = $id;
-        $this->set('passagem', $this->Passagem->read());
-        self::view_action();
-    }
+    }    
 
     public function add(){
             	 
@@ -56,17 +54,24 @@ class PassagensController extends AppController{
             
             $passagem = array('rota_id'=>$this->request->data['Passagem']['rotas_id'],'veiculo_id'=>$this->request->data['Passagem']['veiculo_id'],'cliente'=>$this->request->data['Passagem']['cliente'],'funcionario'=>$this->request->data['Passagem']['funcionario'],'pagamento_id'=>"");
           
-            print_r($passagem);
+            
             if($this->Pagamento->save($pagamentoInfo)){
                 $pagamento_id =  $this->Pagamento->getLastInsertId();
                 $passagem['pagamento_id'] = $pagamento_id;
-                pr($passagem);
+               
                 if($this->Passagem->save($passagem)){
                     $passagem_id =  $this->Passagem->getLastInsertId();
                     $userId['passagem_id'] = $passagem_id;
                     $userId['passagem_rota_id'] = $this->request->data['Passagem']['rotas_id'];
-                    if($this->Compra->save($userId)){   
-                        $this->redirect(array('action'=>'view'));
+                    
+                    if($this->Compra->save($userId)){  
+                        $user = $this->User->findById($this->Session->read('Auth.User.id'));
+
+                        $user['User']['pontos'] = (int)$user['User']['pontos'] + (int)$this->Rota->findById($this->request->data['Passagem']['rotas_id'])['Rota']['pontos'];
+                        unset($user['User']['password']);
+                        
+                        $this->User->save($user);
+                        $this->redirect(array('action'=>'view',$passagem_id));
                     }
 
                 } 
@@ -86,6 +91,64 @@ class PassagensController extends AppController{
         self::getVeiculo();
         self::view_action();
     }
+    function view($id) {
+        if (!$id) {
+            throw new NotFoundException(__('Invalid passagem'));
+        }
+
+        $passagem = $this->Passagem->findById($id);
+        if (!$passagem) {
+            throw new NotFoundException(__('Invalid passagem'));
+        }
+        $this->set('passagem', $passagem);
+        self::view_action();
+    }
+
+    function geraPDF($id){ 
+        $passagem = $this->Passagem->findById($id);
+        $tcpdf = new XTCPDF(); 
+        $textfont = 'aefurat'; // looks better, finer, and more condensed than 'dejavusans' 
+
+        // $tcpdf->SetAuthor("BuyPass - BuyPass.com.br"); 
+        $tcpdf->SetAutoPageBreak( false ); 
+        // $tcpdf->setHeaderFont(array($textfont,'',40)); 
+        // // $tcpdf->xheadercolor = array(150,0,0); 
+        // $tcpdf->xheadertext = 'BuyPas'; 
+        $tcpdf->xfootertext = 'Copyright Â© %d BuyPass direitos reservadas.'; 
+         $tcpdf->SetFont($textfont,'B',16);
+        // add a page (required with recent versions of tcpdf) 
+        $tcpdf->AddPage(); 
+       
+        $tcpdf->SetTextColor(0, 0, 0); 
+        // set text shadow effect
+$tcpdf->setTextShadow(array('enabled'=>true, 'depth_w'=>0.2, 'depth_h'=>0.2, 'color'=>array(196,196,196), 'opacity'=>1, 'blend_mode'=>'Normal'));
+
+        $string = '<div class="row">
+                    <h2> Comprovante de compra de passagem </h2>
+                       
+                     <span>Nome:</span>'.' '. h($passagem['Passagem']['cliente']) .'<br>'.
+                     '<span>Transação feita (por/no):</span>'.' '. h($passagem['Passagem']['funcionario']).'<br>'. 
+                     '<span>Trajeto e Data e Horário:</span>'.' '. h($passagem['Rota']['trajeto']).'<br>'.
+                     '<span>Valor:</span>'.' '.  h($passagem['Rota']['valor']).'.00'.'<br>'.
+                     '<span>Tipo de Ônibus:</span>'.' '. h($passagem['Veiculo']['tipo']) .'<br>'. 
+                     '<span>Pontos ganhos:</span>'.' '. h($passagem['Rota']['pontos']).'
+                        
+                </div>
+';
+
+       $html = <<<EOD
+        $string
+EOD;
+
+// Print text using writeHTMLCell()
+        $tcpdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
+        // ... 
+        // etc. 
+        // see the TCPDF examples  
+
+        echo $tcpdf->Output('BuyPass.pdf', 'D'); 
+        $this->redirect(array('action'=>'view',$id));
+    }
 
     function edit($id = null){
         $this->Passagem->id = $id;
@@ -102,14 +165,30 @@ class PassagensController extends AppController{
         self::view_action();
     }
 
-    function delete($id){
-        if(!$this->request->is('post')){
-            throw new MethodNotAllowedException();
+    public function delete($id,$id_rota,$pontos,$pessoa){
+        
+        $user = $this->User->findById($pessoa);
+        if( ($user['User']['pontos'] != 0)){
+            if( ($user['User']['pontos'] < $pontos)){
+                $user['User']['pontos'] = 0;
+            }else{
+                $user['User']['pontos'] = $user['User']['pontos'] - $pontos;
+            }
         }
-        if ($this->Passagem->delete($id)) {
-            $this->Session->setFlash('Passagem deletada com sucesso');
-            $this->redirect(array('action' => 'index'));
-        }
+            
+
+        
+        
+        unset($this->request->data['User']['password']);
+        // if(!$this->request->is('post')){
+        //     throw new MethodNotAllowedException();
+        // }
+        $this->User->save($user);        
+        $this->Compra->query('DELETE FROM `buypass`.`compras` WHERE passagem_id ='.$id .' AND passagem_rota_id ='.$id_rota.' ;');
+        $this->Passagem->query('DELETE FROM `buypass`.`passagens` WHERE id ='.$id .';');
+        $this->Session->setFlash('Passagem deletada com sucesso');
+        $this->redirect(Router::url('/',true));
+       
     }
 }
 ?>
