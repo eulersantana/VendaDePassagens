@@ -16,6 +16,7 @@
 		<th><?php echo $this->Paginator->sort('Tipo de pagamento');?></th>		
 		<th><?php echo $this->Paginator->sort('Veiculo');?></th>
 		<th><?php echo $this->Paginator->sort('Status');?></th>
+		<th><?php echo $this->Paginator->sort('Segunda Via');?></th>
 		
 	</tr>
 	<?php foreach ($compras as $compra ) { ?>
@@ -37,6 +38,8 @@
 			}else{
 				echo "<span class='glyphicon glyphicon-remove'>Apagar</span>";
 			};?></td>
+                        <td class="actions">
+			<?php echo $this->Html->link(__('Solicitar'), array('controller' => 'passagens', 'action' => 'geraPDF', $compra['Compra']['passagem_id'])); ?></td>
 
 	</tr>
 		<?php } ?>

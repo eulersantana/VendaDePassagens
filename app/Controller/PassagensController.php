@@ -32,8 +32,13 @@ class PassagensController extends AppController{
         
     }
    
-	function index(){
-		 $this->set('passagem', $this->paginate());
+    public function index(){
+        $this->set('passagens', $this->Passagem->find('all'));
+         self::view_action();
+	}
+
+    public function search(){
+        $this->set('passagens', $this->Passagem->find('all'));
          self::view_action();
 	}
 
@@ -54,7 +59,7 @@ class PassagensController extends AppController{
             
             $pagamentoInfo = array('parcelas'=>$this->request->data['Passagem']['parcelas'],'status'=>'1','valor_parcelas'=>$this->request->data['Passagem']['valor_parcelas'],'tipo'=>$tipo );
             
-            $passagem = array('rota_id'=>$this->request->data['Passagem']['rotas_id'],'veiculo_id'=>$this->request->data['Passagem']['veiculo_id'],'cliente'=>$this->request->data['Passagem']['cliente'],'funcionario'=>$this->request->data['Passagem']['funcionario'],'pagamento_id'=>"");
+            $passagem = array('rota_id'=>$this->request->data['Passagem']['rotas_id'],'veiculo_id'=>$this->request->data['Passagem']['veiculo_id'],'cliente'=>$this->request->data['Passagem']['cliente'],'poltrona'=>$this->request->data['Passagem']['poltrona'],'funcionario'=>$this->request->data['Passagem']['funcionario'],'pagamento_id'=>"");
           
             print_r($passagem);
             if($this->Pagamento->save($pagamentoInfo)){
@@ -66,7 +71,7 @@ class PassagensController extends AppController{
                     $userId['passagem_id'] = $passagem_id;
                     $userId['passagem_rota_id'] = $this->request->data['Passagem']['rotas_id'];
                     if($this->Compra->save($userId)){   
-                        $this->redirect(array('action'=>'view'));
+                        $this->redirect(array('action'=>'view', $passagem_id));
                     }
 
                 } 
@@ -156,7 +161,20 @@ EOD;
             }
         }
 
-        self::getRotas();
+        self::view_action();
+    }
+
+    function mudar_poltrona($id = null){
+        $this->Passagem->id = $id;
+        if($this->request->is('get')) {
+            $this->request->data = $this->Passagem->read();
+        } else {
+            if($this->Passagem->save($this->request->data)) {
+                $this->Session->setFlash('A passagem foi atualizada com sucesso!');
+                $this->redirect(array('action' => 'view', $this->Passagem->id));
+            }
+        }
+
         self::view_action();
     }
 

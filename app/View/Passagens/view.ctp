@@ -16,6 +16,11 @@
 			<?php echo h($passagem['Rota']['trajeto']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Poltrona:'); ?></dt>
+		<dd>
+			<?php echo h($passagem['Passagem']['poltrona']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Valor:'); ?></dt>
 		<dd>
 			<?php echo h($passagem['Rota']['valor']).'.00'; ?>
