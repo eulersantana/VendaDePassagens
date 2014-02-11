@@ -7,7 +7,7 @@ class PassagensController extends AppController{
 	public $name = 'Passagens';
 	public $components = array('Session','RequestHandler');
     public $hasOne = array('Veiculo');
-    var $uses = array('Pagamento','Passagem','Compra','Veiculo');
+    var $uses = array('Pagamento','Passagem','Compra','Veiculo','User');
 
 
     public function view_action() {
@@ -26,9 +26,7 @@ class PassagensController extends AppController{
 
     public function lista_rotas_json() {
         $this->layout = null;       
-             $this->set('rotas', $this->Passagem->Rota->find('all'));
-        
-       
+             $this->set('rotas', $this->Passagem->Rota->find('all'));      
         
     }
    
@@ -61,17 +59,24 @@ class PassagensController extends AppController{
             
             $passagem = array('rota_id'=>$this->request->data['Passagem']['rotas_id'],'veiculo_id'=>$this->request->data['Passagem']['veiculo_id'],'cliente'=>$this->request->data['Passagem']['cliente'],'poltrona'=>$this->request->data['Passagem']['poltrona'],'funcionario'=>$this->request->data['Passagem']['funcionario'],'pagamento_id'=>"");
           
-            print_r($passagem);
+            
             if($this->Pagamento->save($pagamentoInfo)){
                 $pagamento_id =  $this->Pagamento->getLastInsertId();
                 $passagem['pagamento_id'] = $pagamento_id;
-                pr($passagem);
+               
                 if($this->Passagem->save($passagem)){
                     $passagem_id =  $this->Passagem->getLastInsertId();
                     $userId['passagem_id'] = $passagem_id;
                     $userId['passagem_rota_id'] = $this->request->data['Passagem']['rotas_id'];
-                    if($this->Compra->save($userId)){   
-                        $this->redirect(array('action'=>'view', $passagem_id));
+                    
+                    if($this->Compra->save($userId)){  
+                        $user = $this->User->findById($this->Session->read('Auth.User.id'));
+
+                        $user['User']['pontos'] = (int)$user['User']['pontos'] + (int)$this->Rota->findById($this->request->data['Passagem']['rotas_id'])['Rota']['pontos'];
+                        unset($user['User']['password']);
+                        
+                        $this->User->save($user);
+                        $this->redirect(array('action'=>'view',$passagem_id));
                     }
 
                 } 
@@ -101,7 +106,7 @@ class PassagensController extends AppController{
             throw new NotFoundException(__('Invalid passagem'));
         }
         $this->set('passagem', $passagem);
-       
+        self::view_action();
     }
 
     function geraPDF($id){ 
@@ -178,14 +183,30 @@ EOD;
         self::view_action();
     }
 
-    function delete($id){
-        if(!$this->request->is('post')){
-            throw new MethodNotAllowedException();
+    public function delete($id,$id_rota,$pontos,$pessoa){
+        
+        $user = $this->User->findById($pessoa);
+        if( ($user['User']['pontos'] != 0)){
+            if( ($user['User']['pontos'] < $pontos)){
+                $user['User']['pontos'] = 0;
+            }else{
+                $user['User']['pontos'] = $user['User']['pontos'] - $pontos;
+            }
         }
-        if ($this->Passagem->delete($id)) {
-            $this->Session->setFlash('Passagem deletada com sucesso');
-            $this->redirect(array('action' => 'index'));
-        }
+            
+
+        
+        
+        unset($this->request->data['User']['password']);
+        // if(!$this->request->is('post')){
+        //     throw new MethodNotAllowedException();
+        // }
+        $this->User->save($user);        
+        $this->Compra->query('DELETE FROM `buypass`.`compras` WHERE passagem_id ='.$id .' AND passagem_rota_id ='.$id_rota.' ;');
+        $this->Passagem->query('DELETE FROM `buypass`.`passagens` WHERE id ='.$id .';');
+        $this->Session->setFlash('Passagem deletada com sucesso');
+        $this->redirect(Router::url('/',true));
+       
     }
 }
 ?>

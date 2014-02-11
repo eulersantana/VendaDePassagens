@@ -23,6 +23,7 @@
         echo $this->Html->script('jquery.maskedinput'); 
         echo $this->Html->script('mascara');
         echo $this->Html->script('jquery.ajaxRotas');
+        echo $this->Html->script('Chart');
         
         echo $this->Js->writeBuffer(array("cache"=>TRUE));
 
@@ -37,7 +38,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body >
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -55,17 +56,19 @@
              <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."veiculos/index".">Veiculos</a>" ?>
              <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."rotas/index".">Rota</a>" ?>
              <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."promocoes/index".">Promoção</a>" ?>
+             <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."users/grafico_diario".">Gráfico</a>" ?>
           <?php }else{ ?>
                       <?php if($this->Session->read('Auth.User.tipo') == "Cliente"){ ?>
                                  <?php echo "<a class='navbar-brand' href=".Router::url('/', true).">BuyPass</a>" ?>
                                  <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."clientes/edit/".$this->Session->read('Auth.User.id').">Usuários</a>" ?>
                                  <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."passagens/add".">Comprar</a>" ?>
-                                 <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."compras".">Historico de Compra</a>" ?>
+                                 <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."compras/index".">Historico</a>" ?>
                                  <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."passagens/search".">Mudar Poltrona</a>" ?>
                       <?php }else{ ?>
                                 <?php echo "<a class='navbar-brand' href=".Router::url('/', true).">BuyPass</a>" ?>
                                 <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."clientes/edit/".$this->Session->read('Auth.User.id').">Usuários</a>" ?>
                                 <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."passagens/add".">Comprar</a>" ?>
+
                       <?php } ?>
 
           <?php } ?>
@@ -76,12 +79,19 @@
 
                 if(!$this->Session->read('Auth.User.nome')){
                 echo $this->Html->link('Entrar','../users/login',array('class'=>'btn btn-primary btn-lg navbar-right','role'=>'button')); 
+
               }else{
+                
                 echo $this->Html->link('Sair','../users/logout',array('class'=>'btn btn-primary btn-lg navbar-right','role'=>'button'));
-                echo '<span class="badge navbar-right">'.$this->Session->read('Auth.User.nome').'</span>';
+                echo '<button type="button" class="btn btn-default btn-lg navbar-right">
+                  <span class="glyphicon glyphicon-circle-arrow-up"></span>'.' <span id="pontos"></span> '.'Pontos
+                </button>';
+                echo '<button type="button" class="btn btn-default btn-lg navbar-right">
+                  <span class="glyphicon glyphicon-user"> </span>'.'<span id="nome">'.$this->Session->read('Auth.User.nome').'</span></button>';
                 
               }
                 ?>
+                
         </div>
         <!--/.navbar-collapse -->
       </div>
@@ -99,24 +109,9 @@
     <div class="container">
       <!-- Example row of columns -->
       <?php 
-          echo $this->fetch('content'); ?>
-      <!-- <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-      </div> -->
+          echo $this->fetch('content'); 
+      ?>
+      
 
       <hr>
 

@@ -9,6 +9,7 @@
 	//print_r($this->Auth->user ( 'username' ));
 ?>
 <table class="table">
+	
 	<tr>
 		<th><?php echo $this->Paginator->sort('Trajeto - Data e Hora');?></th>
 		<th><?php echo $this->Paginator->sort('Valor');?></th>	
@@ -39,7 +40,7 @@
 				echo "<span class='glyphicon glyphicon-remove'>Apagar</span>";
 			};?></td>
                         <td class="actions">
-			<?php echo $this->Html->link(__('Solicitar'), array('controller' => 'passagens', 'action' => 'geraPDF', $compra['Compra']['passagem_id'])); ?></td>
+			<td><?php echo '<span class="glyphicon glyphicon-print">'.'  '. $this->Html->link('Imprimi',array('action'=>'geraPDF',$compra['Passagem']['id'])).'</span>';?></td>
 
 	</tr>
 		<?php } ?>

@@ -17,6 +17,9 @@
     		
 	        if($this->request->is('post')){
 	        	$this->request->data['Cliente']['tipo'] = 'cliente';
+	        	$this->request->data['Cliente']['pontos'] = 0;
+	        	$this->request->data['Cliente']['created'] = date('y-m-d H:i:s');
+	        	
 	            if($this->Cliente->save($this->request->data,false)){
 	                $this->Session->setFlash('Usuario salvo com sucesso!');
 	                $this->redirect(Router::url('/', true));

@@ -2,7 +2,7 @@
 
 // app/Controller/UsersController.php
 class UsersController extends AppController {
-    
+    public $helpers = array('Html' ,'Form', 'Js' );
     public function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow('add','logout', 'loggedout','login');
@@ -16,7 +16,7 @@ class UsersController extends AppController {
 
     public function login() {
         if ($this->Auth->login()) {
-            $this->redirect($this->Auth->redirect());
+            $this->redirect(Router::url('/',true));
         } else {
             $this->Session->setFlash(
                 __('E-mail ou senha invalido!' ),
@@ -25,8 +25,14 @@ class UsersController extends AppController {
         self::view_action();
     }
 
-    
-
+     public function lista_user() {
+        $this->layout = null;       
+        $this->set('user', $this->User->query('SELECT * FROM buypass.users'));      
+        
+    }
+    public function grafico_diario() {
+        self::view_action();
+    }
     public function logout() {
         if($this->Auth->logout()){
             $this->redirect(Router::url('/',true));
@@ -39,9 +45,8 @@ class UsersController extends AppController {
     }
 
     public function index() {
-        
-        $this->User->recursive = 0;
-        $this->set('users', $this->paginate());
+        $data = $this->paginate('User');
+        $this->set('user', $data);
          self::view_action();
     }
 
@@ -57,7 +62,8 @@ class UsersController extends AppController {
      public function add(){
         
         if($this->request->is('post')){
-           
+           $this->request->data['User']['pontos'] = 0;
+           pr($this->request->data);
             if($this->User->save($this->request->data,false)){
                 $this->Session->setFlash('Usuario salvo com sucesso!');
                 $this->redirect(array('action'=>'index'));
@@ -65,6 +71,8 @@ class UsersController extends AppController {
         }
          self::view_action();
     }
+
+
 
     public function edit($id = null) {
         $this->User->id = $id;
@@ -84,7 +92,7 @@ class UsersController extends AppController {
         }
          self::view_action();
     }
-
+    
     public function delete($id = null) {
         if (!$this->request->is('post')) {
             throw new MethodNotAllowedException();
