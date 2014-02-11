@@ -23,6 +23,7 @@
         echo $this->Html->script('jquery.maskedinput'); 
         echo $this->Html->script('mascara');
         echo $this->Html->script('jquery.ajaxRotas');
+        echo $this->Html->script('Chart');
         
         echo $this->Js->writeBuffer(array("cache"=>TRUE));
 
@@ -37,7 +38,7 @@
     <![endif]-->
   </head>
 
-  <body onload="pontos()">
+  <body >
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -55,6 +56,7 @@
              <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."veiculos/index".">Veiculos</a>" ?>
              <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."rotas/index".">Rota</a>" ?>
              <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."promocoes/index".">Promoção</a>" ?>
+             <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."users/grafico_diario".">Gráfico</a>" ?>
           <?php }else{ ?>
                       <?php if($this->Session->read('Auth.User.tipo') == "cliente"){ ?>
                                  <?php echo "<a class='navbar-brand' href=".Router::url('/', true).">BuyPass</a>" ?>

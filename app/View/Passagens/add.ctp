@@ -3,7 +3,9 @@
 
 <?php
 	echo $this->Form->create('Passagem');
-	echo $this->Form->input('cliente',array('class'=>'form-control','value'=>$this->Session->read('Auth.User.nome')));	
+	echo $this->Form->input('cliente',array('class'=>'form-control','value'=>$this->Session->read('Auth.User.nome')));
+
+	echo $this->Form->input('Usar pontos',array('class'=>'form-control','type'=>'select','options'=>'','id'=>'pontosCompra','empty'=>'Use seus pontos para compra a passagem'));	
 	echo $this->Form->input('funcionario',array('class'=>'form-control','type'=>"hidden",'value'=>'site'));
 	echo $this->Form->input('veiculo_id',array('Tipo do Veiculo','class'=>'form-control','type' => 'select' ,'id' => 'veiculos', 'empty' => 'selecione o tipo do veiculo'));
 	echo $this->Form->input('rotas_id',array('class'=>'form-control','type' => 'select', 'options' => $rotas, 'id' => 'rotas', 'empty' => 'selecione uma rota',"onBlur"=>" valores();"));
@@ -24,13 +26,3 @@
 	echo "<p>";
 ?>
 
-
-<?php 
-
-// echo $this->Ajax->observeField( '#rotas', 
-//     array(
-//         'url' => array( 'action' => 'set' ),
-//         'complete' => 'alert(request.responseText)'
-//     ) 
-// ); 
-?>

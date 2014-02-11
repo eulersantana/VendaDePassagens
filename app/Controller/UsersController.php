@@ -27,10 +27,12 @@ class UsersController extends AppController {
 
      public function lista_user() {
         $this->layout = null;       
-        $this->set('user', $this->User->find('all'));      
+        $this->set('user', $this->User->query('SELECT * FROM buypass.users'));      
         
     }
-
+    public function grafico_diario() {
+        self::view_action();
+    }
     public function logout() {
         if($this->Auth->logout()){
             $this->redirect(Router::url('/',true));
@@ -69,6 +71,8 @@ class UsersController extends AppController {
         }
          self::view_action();
     }
+
+
 
     public function edit($id = null) {
         $this->User->id = $id;
