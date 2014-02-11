@@ -1,4 +1,7 @@
 *.class
+app/tmp/*
+*.swp
+*.htaccess
 
 # Package Files #
 *.jar
