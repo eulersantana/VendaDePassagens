@@ -10,6 +10,7 @@
 		<th>Id</th>
 		<th>Cliente</th>
 		<th>Rota</th>
+		<th>Poltrona</th>
 		<th>Ações</th>
 	</tr>
 	<?php
@@ -19,6 +20,7 @@
 			<td><?php echo h($passagem['Passagem']['id']);?>&nbsp;</td>
 			<td><?php echo $passagem['Passagem']['cliente'];?>&nbsp;</td>
 			<td><?php echo $passagem['Rota']['trajeto'];?>&nbsp;</td>
+			<td><?php echo $passagem['Passagem']['poltrona'];?>&nbsp;</td>
 			<td class="actions">
 			<?php echo $this->Html->link(__('Mudar Poltrona'),array('action' => 'mudar_poltrona', $passagem['Passagem']['id'])); 
 			?>

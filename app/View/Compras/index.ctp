@@ -40,7 +40,7 @@
 				echo "<span class='glyphicon glyphicon-remove'>Apagar</span>";
 			};?></td>
                         <td class="actions">
-			<td><?php echo '<span class="glyphicon glyphicon-print">'.'  '. $this->Html->link('Imprimi',array('action'=>'geraPDF',$compra['Passagem']['id'])).'</span>';?></td>
+			<?php echo '<span class="glyphicon glyphicon-print">'.'  '. $this->Html->link('Imprimi',array('action'=>'geraPDF',$compra['Passagem']['id'])).'</span>';?></td>
 
 	</tr>
 		<?php } ?>
