@@ -9,6 +9,7 @@
 	echo $this->Form->input('funcionario',array('class'=>'form-control','type'=>"hidden",'value'=>'site'));
 	echo $this->Form->input('veiculo_id',array('Tipo do Veiculo','class'=>'form-control','type' => 'select' ,'id' => 'veiculos', 'empty' => 'selecione o tipo do veiculo'));
 	echo $this->Form->input('rotas_id',array('class'=>'form-control','type' => 'select', 'options' => $rotas, 'id' => 'rotas', 'empty' => 'selecione uma rota',"onBlur"=>" valores();"));
+	echo $this->Form->input('poltrona',array('class'=>'form-control'));	
 
 	echo $this->Form->input('valor',array('id' => 'valor','class'=>'form-control','readonly'=>"true"));
 	$parcelas = array('1','2','3');

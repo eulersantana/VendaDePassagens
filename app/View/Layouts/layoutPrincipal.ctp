@@ -56,14 +56,15 @@
              <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."veiculos/index".">Veiculos</a>" ?>
              <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."rotas/index".">Rota</a>" ?>
              <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."promocoes/index".">Promoção</a>" ?>
+             <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."pagamentos/faturamento".">Faturamento</a>" ?>
              <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."users/grafico_diario".">Gráfico</a>" ?>
           <?php }else{ ?>
-                      <?php if($this->Session->read('Auth.User.tipo') == "cliente"){ ?>
+                      <?php if($this->Session->read('Auth.User.tipo') == "Cliente"){ ?>
                                  <?php echo "<a class='navbar-brand' href=".Router::url('/', true).">BuyPass</a>" ?>
                                  <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."clientes/edit/".$this->Session->read('Auth.User.id').">Usuários</a>" ?>
                                  <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."passagens/add".">Comprar</a>" ?>
-                                  <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."compras/index".">Historico</a>" ?>
-                                 
+                                 <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."compras/index".">Historico</a>" ?>
+                                 <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."passagens/search".">Mudar Poltrona</a>" ?>
                       <?php }else{ ?>
                                 <?php echo "<a class='navbar-brand' href=".Router::url('/', true).">BuyPass</a>" ?>
                                 <?php echo "<a class='navbar-brand' href=".Router::url('/', true)."clientes/edit/".$this->Session->read('Auth.User.id').">Usuários</a>" ?>

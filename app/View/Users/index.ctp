@@ -33,6 +33,8 @@
 	<?php endforeach; ?>
 	</table>
 	
+	</table>
+	
 
 	<div class="paging">
 	<?php
@@ -41,5 +43,6 @@
 		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'btn btn-default'));
 	?>
 	</div>
+
 </div>
 

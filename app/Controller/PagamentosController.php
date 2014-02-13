@@ -57,5 +57,26 @@
                 $this->redirect(array('action' => 'index'));
             }
         }
+	function faturamento(){
+            self::view_action();
+
+		}
+	function historico(){
+          $dia = $this->params['url']['dia'];
+          $mes = $this->params['url']['mes'];
+          if ($dia['day'] != '' && $dia['month'] != '' && $dia['year'] != '') {
+                        $startdate = '"'.$dia['year'].'-'.$dia['month'].'-'.$dia['day'].' 00:00:00'.'"';
+                        $enddate = '"'.$dia['year'].'-'.$dia['month'].'-'.$dia['day'].' 23:59:59'.'"';
+			$this->set('pagamentos', $this->Pagamento->find('all', array('conditions' => array('Pagamento.created_at BETWEEN '.$startdate.' AND '.$enddate))));
+          } else if ($mes['month'] != '' && $mes['year'] != '') {
+                        $startdate = '"'.$mes['year'].'-'.$mes['month'].'-'.'01'.' 00:00:00'.'"';
+                        $enddate = '"'.$mes['year'].'-'.$mes['month'].'-'.'31'.' 23:59:59'.'"';
+            
+			$this->set('pagamentos', $this->Pagamento->find('all', array('conditions' => array('Pagamento.created_at BETWEEN '.$startdate.' AND '.$enddate))));
+          }
+			$pagamentos = $this->paginate('Pagamento');
+            self::view_action();
+
+		}
 	}
 ?>

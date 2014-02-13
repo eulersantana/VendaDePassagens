@@ -9,7 +9,6 @@
 	<tr>
 		<th>Id</th>
 		<th>Cliente</th>
-		<th>Funcionário</th>
 		<th>Rota</th>
 		<th>Poltrona</th>
 		<th>Ações</th>
@@ -20,13 +19,10 @@
 		<tr>
 			<td><?php echo h($passagem['Passagem']['id']);?>&nbsp;</td>
 			<td><?php echo $passagem['Passagem']['cliente'];?>&nbsp;</td>
-			<td><?php echo $passagem['Passagem']['funcionario'];?>&nbsp;</td>
 			<td><?php echo $passagem['Rota']['trajeto'];?>&nbsp;</td>
 			<td><?php echo $passagem['Passagem']['poltrona'];?>&nbsp;</td>
 			<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $passagem['Passagem']['id'])); 
-				echo $this->Html->link(__('Edit'),array('action' => 'edit', $passagem['Passagem']['id'])); 
-				echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $passagem['Passagem']['id']), array('confirm' => 'Você tem certeza ?'));
+			<?php echo $this->Html->link(__('Mudar Poltrona'),array('action' => 'mudar_poltrona', $passagem['Passagem']['id'])); 
 			?>
 			</td>
 		</tr>	
