@@ -15671,3 +15671,80 @@ Request URL: /VendaDePassagens/css/heroic-features.css
 Stack Trace:
 #0 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-02-12 23:01:26 Error: [MissingActionException] Action ComprasController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'ComprasController',
+  'action' => 'users',
+)
+Request URL: /VendaDePassagens/compras/users/lista_user
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ComprasController), Object(CakeRequest), Object(CakeResponse))
+#2 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-12 23:01:29 Error: [MissingActionException] Action ComprasController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'ComprasController',
+  'action' => 'users',
+)
+Request URL: /VendaDePassagens/compras/users/lista_user
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ComprasController), Object(CakeRequest), Object(CakeResponse))
+#2 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-12 23:01:31 Error: [MissingActionException] Action ComprasController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'ComprasController',
+  'action' => 'users',
+)
+Request URL: /VendaDePassagens/compras/users/lista_user
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ComprasController), Object(CakeRequest), Object(CakeResponse))
+#2 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-12 23:01:35 Error: [MissingActionException] Action ComprasController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'ComprasController',
+  'action' => 'users',
+)
+Request URL: /VendaDePassagens/compras/users/lista_user
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ComprasController), Object(CakeRequest), Object(CakeResponse))
+#2 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-12 23:01:38 Error: [MissingActionException] Action ComprasController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'ComprasController',
+  'action' => 'users',
+)
+Request URL: /VendaDePassagens/compras/users/lista_user
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ComprasController), Object(CakeRequest), Object(CakeResponse))
+#2 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-12 23:01:41 Error: [MissingActionException] Action ComprasController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'ComprasController',
+  'action' => 'users',
+)
+Request URL: /VendaDePassagens/compras/users/lista_user
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ComprasController), Object(CakeRequest), Object(CakeResponse))
+#2 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-12 23:07:48 Error: [MissingActionException] Action ComprasController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'ComprasController',
+  'action' => 'users',
+)
+Request URL: /VendaDePassagens/compras/users/lista_user
+Stack Trace:
+#0 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/VendaDePassagens/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ComprasController), Object(CakeRequest), Object(CakeResponse))
+#2 /opt/lampp/htdocs/VendaDePassagens/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
