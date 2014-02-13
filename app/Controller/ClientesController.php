@@ -16,7 +16,7 @@
 	    public function add(){
     		
 	        if($this->request->is('post')){
-	        	$this->request->data['Cliente']['tipo'] = 'cliente';
+	        	$this->request->data['Cliente']['tipo'] = 'Cliente';
 	        	$this->request->data['Cliente']['pontos'] = 0;
 	        	$this->request->data['Cliente']['created'] = date('y-m-d H:i:s');
 	        	
