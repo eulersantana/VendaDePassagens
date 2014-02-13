@@ -14,7 +14,7 @@
     //         popularListaDeCidades(null);
     // });
 // });
-  
+  window.onload = pontos();  
 function valores(){
     if($('#rotas').val().length != 0) {
          $.getJSON("lista_rotas_json",function(data){ 
@@ -36,8 +36,12 @@ function pontos(){
     if(newURL.length == 27){
         $.getJSON("users/lista_user",function(data){ 
             for(var i = 0; i < data.length; i++){ 
-                if(data[i]['User']['nome'] == $('#nome').html()){
-                    $("#pontos").html(data[i]['User']['pontos']);
+                if(data[i]['users']['nome'] == $('#nome').html()){
+                    $("#pontos").html(data[i]['users']['pontos']);
+                    var op = $('#pontosCompra').html();
+                    op = op+"<option value='"+$('#pontos').html()+"'>"+$('#pontos').html()+"</option>";
+                    $('#pontosCompra').html(op);
+                    break;
                 }
             }
         });
@@ -45,22 +49,32 @@ function pontos(){
         if(newURL.length == 40){
             $.getJSON("../users/lista_user",function(data){ 
             for(var i = 0; i < data.length; i++){ 
-                if(data[i]['User']['nome'] == $('#nome').html()){
-                    $("#pontos").html(data[i]['User']['pontos']);
+                if(data[i]['users']['nome'] == $('#nome').html()){
+                    $("#pontos").html(data[i]['users']['pontos']);
+                    var op = $('#pontosCompra').html();
+                    op = op+"<option value='"+$('#pontos').html()+"'>"+$('#pontos').html()+"</option>";
+                    $('#pontosCompra').html(op);
+                    break;   
                 }
             }
         });
         }else{
             $.getJSON("../../users/lista_user",function(data){ 
             for(var i = 0; i < data.length; i++){ 
-                if(data[i]['User']['nome'] == $('#nome').html()){
-                    $("#pontos").html(data[i]['User']['pontos']);
+                if(data[i]['users']['nome'] == $('#nome').html()){
+                    $("#pontos").html(data[i]['users']['pontos']);
+                    var op = $('#pontosCompra').html();
+                    op = op+"<option value='"+$('#pontos').html()+"'>"+$('#pontos').html()+"</option>";
+                    $('#pontosCompra').html(op);
+                    break;
                 }
             }
         });
         }
     }
-        
+    
+
+
     
 }
 
